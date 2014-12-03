@@ -1,0 +1,577 @@
+.A, .AMinus, .APlus, .B, .BMinus, .BPlus, .C, .CMinus, .CPlus, .D, .F, .U, .AL, .AMinusL, .APlusL, .BL, .BMinusL, .BPlusL, .CL, .CMinusL, .CPlusL, .DL, .FL, .UL, .logo, .like, .dislike {
+    background: url(sprites.png) no-repeat;
+}
+.A {
+    background-position: -4px -3px;
+    width: 51px;
+    height: 60px;
+}
+.AMinus {
+    background-position: -141px -4px;
+    width: 51px;
+    height: 60px;
+}
+.APlus {
+    background-position: -272px -71px;
+    width: 51px;
+    height: 60px;
+}
+.B {
+    background-position: -336px 0;
+    width: 51px;
+    height: 60px;
+}
+.BMinus {
+    background-position: -339px -74px;
+    width: 51px;
+    height: 60px;
+}
+.BPlus {
+    background-position: -274px -1px;
+    width: 51px;
+    height: 60px;
+}
+.C {
+    background-position: -205px -69px;
+    width: 51px;
+    height: 60px;
+}
+.CMinus {
+    background-position: -210px 0;
+    width: 51px;
+    height: 60px;
+}
+.CPlus {
+    background-position: -3px -74px;
+    width: 51px;
+    height: 60px;
+}
+.D {
+    background-position: -139px -69px;
+    width: 51px;
+    height: 60px;
+}
+.F {
+    background-position: -63px -71px;
+    width: 51px;
+    height: 60px;
+}
+.U {
+    background-position: -68px -3px;
+    width: 51px;
+    height: 60px;
+}
+.AL {
+    background-position: -419px -126px;
+    width: 85px;
+    height: 100px;
+}
+.AMinusL {
+    background-position: -517px -129px;
+    width: 85px;
+    height: 100px;
+}
+.APlusL {
+    background-position: -521px -13px;
+    width: 85px;
+    height: 100px;
+}
+.BL {
+    background-position: -414px -14px;
+    width: 85px;
+    height: 100px;
+}
+.BMinusL {
+    background-position: -313px -264px;
+    width: 85px;
+    height: 100px;
+}
+.BPlusL {
+    background-position: -207px -264px;
+    width: 85px;
+    height: 100px;
+}
+.CL {
+    background-position: -105px -266px;
+    width: 85px;
+    height: 100px;
+}
+.CMinusL {
+    background-position: 0 -269px;
+    width: 85px;
+    height: 100px;
+}
+.CPlusL {
+    background-position: -329px -149px;
+    width: 85px;
+    height: 100px;
+}
+.DL {
+    background-position: -215px -147px;
+    width: 85px;
+    height: 100px;
+}
+.FL {
+    background-position: -105px -148px;
+    width: 85px;
+    height: 100px;
+}
+.UL {
+    background-position: -3px -152px;
+    width: 85px;
+    height: 100px;
+}
+@font-face {
+    font-family: 'JF Light';
+    src: url('/fonts/JF-Flat-light.woff') format('woff'),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    
+    url('/fonts/JF-Flat-light.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+    font-family: 'JF Regular';
+    src: url('/fonts/JF-Flat-regular.woff') format('woff'),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    
+    url('/fonts/JF-Flat-regular.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+body {
+    font-family: 'JF Regular', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+a, a:visited, a:link {
+    color: black;
+    text-decoration: none;
+}
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+h1 {
+    font-family: 'JF Regular', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+h3#logoText {
+    font-family: 'JF Light', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 5px;
+}
+h1#headline {
+    margin: 60px;
+}
+h3#subheadline {
+    font-family: 'JF Light', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+.dislike, .like, #logo {
+    background: url(sprites.png) no-repeat;
+}
+#layoutContainer {
+    min-height: 200px;
+}
+#logo {
+    background-position: -466px -248px;
+    width: 133px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.divider {
+    margin: 60px auto;
+    width: 260px;
+    height: 2px;
+    background-color: black;
+}
+#searchContainer {
+    width: 860px;
+    height: 70px;
+    margin: 60px auto;
+}
+#search {
+    width: 860px;
+    height: 70px;
+    border: none;
+    display: block;
+    outline: none;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: grey;
+}
+#teacherCardContainer {
+    width: 850px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.teacherCard {
+    width: 400px;
+    height: 60px;
+    margin: 30px 0;
+    float: left;
+    overflow: hidden;
+}
+.teacherCard:nth-child(even) {
+    margin-left: 50px;
+}
+.teacherCardLeft {
+    float: left;
+    width: 329px;
+    height: 60px;
+    margin-right: 20px;
+}
+.teacherCardName {
+    width: 329px;
+    height: 58px;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1.3;
+}
+#choosePosContainer {
+    width: 250px;
+    height: auto;
+    margin: 30px auto;
+    overflow: hidden;
+}
+.choosePos {
+    width: 120px;
+    height: 25px;
+    background-color: grey;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    float: left;
+    border-radius: 5px;
+    padding: 13px 0;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    /* For Safari 3.1 to 6.0 */
+    
+    cursor: pointer;
+}
+.choosePos:nth-child(even) {
+    margin-left: 10px;
+}
+.choosePos:hover {
+    background-color: black;
+}
+#addteacherTextField {
+    width: 500px;
+    height: 70px;
+    border: none;
+    display: block;
+    outline: none;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: right;
+    color: grey;
+    float: right;
+    margin-bottom: 30px;
+}
+#addteacherPos {
+    width: 60px;
+    height: 70px;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    float: right;
+    text-align: right;
+}
+#addTeacherContainer {
+    width: 560px;
+    height: auto;
+    margin: 30px auto;
+    overflow: hidden;
+}
+#addTeacherContainer form {
+    width: 570px;
+    float: right;
+}
+.addTeacherButton {
+    width: 250px;
+    height: 50px;
+    padding: 13px 0;
+    margin: 30px auto;
+    background-color: black;
+    color: white;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    /* For Safari 3.1 to 6.0 */
+    
+    cursor: pointer;
+    display: block;
+    outline: none;
+    border: none;
+}
+.addTeacherButton:hover {
+    opacity: 0.8;
+}
+#dislikesBarBig {
+    width: 500px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: red;
+}
+#likesBarBig {
+    height: 2px;
+    background-color: green;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    /* For Safari 3.1 to 6.0 */
+}
+.dislikesBarSmall {
+    width: 329px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: red;
+}
+.likesBarSmall {
+    height: 2px;
+    background-color: green;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    /* For Safari 3.1 to 6.0 */
+}
+#opinionContainer {
+    width: 650px;
+    height: auto;
+    margin: 20px auto;
+}
+#opinion {
+    padding-top: 15px;
+    width: 650px;
+    height: 50px;
+    border: none;
+    display: block;
+    outline: none;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: grey;
+    background-color: transparent;
+    resize: none;
+}
+#addOpinionContainer {
+    width: 550px;
+    height: auto;
+    margin: 30px auto;
+    overflow: hidden;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+#positiveOpinion {
+    width: 234px;
+    height: 25px;
+    background-color: green;
+    float: left;
+    border-radius: 5px;
+    padding: 13px;
+    text-align: right;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    /* For Safari 3.1 to 6.0 */
+    
+    cursor: pointer;
+}
+#negativeOpinion {
+    width: 234px;
+    height: 25px;
+    background-color: red;
+    float: left;
+    border-radius: 5px;
+    padding: 13px;
+    margin-left: 30px;
+    text-align: right;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    /* For Safari 3.1 to 6.0 */
+    
+    cursor: pointer;
+}
+#positiveOpinion:hover {
+    opacity: 0.3;
+}
+#negativeOpinion:hover {
+    opacity: 0.3;
+}
+#likeIcon {
+    display: inline-block;
+    background: url(sprites.png) no-repeat;
+    background-position: -20px -399px;
+    width: 32px;
+    height: 31px;
+    position: relative;
+    right: 50px;
+    bottom: 2px;
+}
+#dislikeIcon {
+    display: inline-block;
+    background: url(sprites.png) no-repeat;
+    background-position: -123px -397px;
+    width: 32px;
+    height: 31px;
+    position: relative;
+    right: 50px;
+    bottom: 2px;
+}
+#positiveOpinionText, #negativeOpinionText {
+    position: relative;
+    bottom: 11px;
+}
+#dislikeCount, #likeCount {
+    position: relative;
+    bottom: 10px;
+    right: 42px;
+}
+#opinionsContainer {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#positiveOpinions {
+    width: 460px;
+    color: green;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+}
+#positiveOpinions p {
+    margin: 50px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+#positiveOpinions p:first-child {
+    margin-top: 0;
+}
+#negativeOpinions {
+    width: 460px;
+    color: red;
+    font-family: 'JF Regular', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+}
+#negativeOpinions p {
+    margin: 30px 0;
+    text-align: center;
+}
+#negativeOpinions p:first-child {
+    margin-top: 0;
+}
+.gradeL {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.grade {
+    float: right;
+}
+.teacherCardLeft a {
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    /* For Safari 3.1 to 6.0 */
+}
+.teacherCardLeft a:hover {
+    color: grey;
+}
+.disabledButtons {
+    opacity: 0.3;
+    cursor: default !important;
+}
+.item {
+    background-color: black !important;
+    border-radius: 5px !important;
+    border: none !important;
+    background-image: none !important;
+    font-size: 20px !important;
+    height: 22px !important;
+    padding-top: 7px !important;
+}
+.selectize-input {
+    text-align: center !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 50px !important;
+}
+.selectize-input input {
+    font-size: 30px !important;
+    line-height: 38px !important;
+    text-align: center !important;
+}
+.selectize-dropdown {
+    text-align: center !important;
+    background-color: grey !important;
+    font-size: 20px !important;
+    box-shadow: none !important;
+    border: none;
+}
+.selectize-dropdown [data-selectable] {
+    background: #fff;
+}
+.courseItem {
+    background-color: black;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    height: 22px;
+    padding-top: 7px;
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px;
+}
+.positiveModal {
+    color: black;
+    background: white;
+    border: 1px solid green;
+}
+.positiveModal h3 {
+    background-color: green;
+    color: white;
+}
+.modalTextArea {
+    width: 100%;
+    border: none;
+    text-align: right;
+    resize: none;
+    outline: none;
+    height: 200px;
+}
+.md-content div button {
+    width: 120px;
+    height: 55px;
+    padding: 13px 0;
+    font-size: 20px;
+    border: none;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+}
+.md-content div button:hover{
+    opacity: 0.3;
+}

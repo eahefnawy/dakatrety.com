@@ -1,0 +1,1 @@
+myOpinions = new GroundDB(null);

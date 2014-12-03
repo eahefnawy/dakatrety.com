@@ -1,0 +1,26 @@
+<template name="layout">
+    <a href="{{pathFor 'home'}}"><div id="logo"></div>
+    <h3 id="logoText">دكاترتى.كوم</h3> </a>
+    <div id="layoutContainer">
+{{>yield}}
+    </div>
+    
+
+    <div class="divider"></div>
+    <h3>ملقتش الدكتور او المعيد بتاعك؟</h3>
+    <div id="choosePosContainer">
+        <div class="choosePos" style="background-color: {{engButtonBG}};">معيد</div>
+        <div class="choosePos" style="background-color: {{drButtonBG}};">دكتور</div>
+
+    </div>
+
+    <div id="addTeacherContainer">
+        <form id="submitTeacher">
+        <div id="addteacherPos">{{positionHTML}}</div>
+            <input id="addteacherTextField" type="text" placeholder="اكتب اسم {{positionText}}">
+            <button type="submit" class="addTeacherButton">انشاء تقييم جديد</button>
+        </form>
+
+
+    </div>
+</template>

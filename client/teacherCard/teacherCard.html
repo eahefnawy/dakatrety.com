@@ -1,0 +1,11 @@
+<template name="teacherCard">
+<div class="teacherCard">
+<div class="teacherCardLeft">
+<a href="{{pathFor "teacherPage" id=_id}}"><div class="teacherCardName">{{fullName}}</div></a>
+<div class="dislikesBarSmall" style="background-color: {{noLikes}};">
+<div class="likesBarSmall" style="width: {{opinionsPercent}}%;"></div>
+</div>
+</div>
+<div class="grade {{grade}}"></div>
+</div>
+</template>

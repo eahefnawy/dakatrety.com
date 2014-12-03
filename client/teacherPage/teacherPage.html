@@ -1,0 +1,62 @@
+<template name="teacherPage">
+<div class="md-modal md-effect-11" id="modal-16">
+            <div class="md-content positiveModal">
+                <h3>رأى اجابى</h3>
+                <div>
+                    <textarea type="text" class="modalTextArea" placeholder="اكتب رأيك هنا"></textarea>
+                    <button class="md-close">اخبط</button>
+                </div>
+            </div>
+        </div>
+
+                    
+<div class="gradeL {{gradeL}}"></div>
+    <h1>{{fullName}}</h1>
+    <div id="dislikesBarBig" style="background-color: {{noLikes}};">
+
+        <div id="likesBarBig" style="width: {{opinionsPercent}}%;"></div>
+    </div>
+    {{#each courses}}
+<div class="courseItem">{{name}}</div>        
+    {{/each}}
+
+
+    <div id="opinionContainer">
+        <textarea id="opinion" type="text" placeholder="{{placeholder}}" {{isDisabled}}></textarea>
+        <div id="coursesContainer" style="display: {{isDisabledCourses}}">
+        <input type="text" id="courses" placeholder="واخدت معاه مواد ايه؟">
+        </div>
+    </div>
+
+
+    <div id="addOpinionContainer">
+        <div id="positiveOpinion" class="md-trigger {{isDisabledClass}}" data-modal="modal-16"><span id="likeIcon"></span><span id="likeCount">{{positiveOpinionsString}}</span><span id="positiveOpinionText">اخبط رأي اجابى</span>
+        </div>
+        <div id="negativeOpinion" class="{{isDisabledClass}}"><span id="dislikeIcon"></span><span id="dislikeCount">{{negativeOpinionsString}}</span><span id="negativeOpinionText">اخبط رأي سلبى</span></div>
+
+
+
+    </div>
+
+    <div id="opinionsContainer">
+    <div id="positiveOpinions">
+    {{#each positiveOpinions}}
+    <p>{{opinion}}</p>
+    {{/each}}
+    </div>
+
+
+    
+    <div id="negativeOpinions">
+
+
+    {{#each negativeOpinions}}
+    <p>{{opinion}}</p>
+    {{/each}}
+
+    </div>
+    </div>
+
+<div class="md-overlay"></div>
+</template>
+
