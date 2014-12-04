@@ -30,7 +30,7 @@ Template.home.events({
 Template.home.helpers({
     teachers: function() {
         if (!Session.get('teachers')) {
-            return Teachers.find()
+            return Teachers.find({}, {sort: {opinionsPercent: -1}})
         } else {
             return Session.get('teachers')
         }
@@ -38,4 +38,3 @@ Template.home.helpers({
 
     }
 });
-

@@ -1,10 +1,11 @@
 <template name="teacherPage">
 <div class="md-modal md-effect-11" id="modal-16">
-            <div class="md-content positiveModal">
-                <h3>رأى اجابى</h3>
+            <div class="md-content {{modalClass}}">
+                <h3>{{modalTitle}}</h3>
                 <div>
-                    <textarea type="text" class="modalTextArea" placeholder="اكتب رأيك هنا"></textarea>
-                    <button class="md-close">اخبط</button>
+                    <textarea id="opinion" type="text" placeholder="اكتب رأيك هنا"></textarea>
+                    <button id="submitOpinion">اخبط</button>
+                    <button id="closeButton" class="md-close">closeButton</button>
                 </div>
             </div>
         </div>
@@ -20,7 +21,7 @@
 <div class="courseItem">{{name}}</div>        
     {{/each}}
 
-
+<!--
     <div id="opinionContainer">
         <textarea id="opinion" type="text" placeholder="{{placeholder}}" {{isDisabled}}></textarea>
         <div id="coursesContainer" style="display: {{isDisabledCourses}}">
@@ -28,13 +29,15 @@
         </div>
     </div>
 
+-->
 
+<h2 id="opinionQuestion">{{placeholder}}</h2>
     <div id="addOpinionContainer">
         <div id="positiveOpinion" class="md-trigger {{isDisabledClass}}" data-modal="modal-16"><span id="likeIcon"></span><span id="likeCount">{{positiveOpinionsString}}</span><span id="positiveOpinionText">اخبط رأي اجابى</span>
         </div>
-        <div id="negativeOpinion" class="{{isDisabledClass}}"><span id="dislikeIcon"></span><span id="dislikeCount">{{negativeOpinionsString}}</span><span id="negativeOpinionText">اخبط رأي سلبى</span></div>
+        <div id="negativeOpinion" class="md-trigger {{isDisabledClass}}"  data-modal="modal-16"><span id="dislikeIcon"></span><span id="dislikeCount">{{negativeOpinionsString}}</span><span id="negativeOpinionText">اخبط رأي سلبى</span></div>
 
-
+<div id="{{disablingDiv}}"></div>
 
     </div>
 

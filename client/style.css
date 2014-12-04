@@ -194,17 +194,19 @@ h3#subheadline {
 }
 #searchContainer {
     width: 860px;
-    height: 70px;
+    height: 72px;
     margin: 60px auto;
+    border: solid 1px black;
+    border-radius: 5px;
 }
 #search {
-    width: 860px;
+    width: 800px;
     height: 70px;
     border: none;
-    display: block;
+    display: inline-block;
     outline: none;
     font-family: 'JF Regular', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     color: grey;
@@ -271,37 +273,38 @@ h3#subheadline {
     background-color: black;
 }
 #addteacherTextField {
-    width: 500px;
+    width: 350px;
     height: 70px;
     border: none;
     display: block;
     outline: none;
     font-family: 'JF Regular', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
     text-align: right;
     color: grey;
     float: right;
-    margin-bottom: 30px;
+    margin: 0 auto;
 }
 #addteacherPos {
     width: 60px;
     height: 70px;
     font-family: 'JF Regular', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
     float: right;
     text-align: right;
+    position: relative;
+    top: 12px;
+    right: 15px;
 }
 #addTeacherContainer {
-    width: 560px;
+    width: 420px;
     height: auto;
     margin: 30px auto;
     overflow: hidden;
 }
 #addTeacherContainer form {
-    width: 570px;
-    float: right;
 }
 .addTeacherButton {
     width: 250px;
@@ -357,21 +360,6 @@ h3#subheadline {
     height: auto;
     margin: 20px auto;
 }
-#opinion {
-    padding-top: 15px;
-    width: 650px;
-    height: 50px;
-    border: none;
-    display: block;
-    outline: none;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    color: grey;
-    background-color: transparent;
-    resize: none;
-}
 #addOpinionContainer {
     width: 550px;
     height: auto;
@@ -380,6 +368,7 @@ h3#subheadline {
     font-family: 'JF Regular', sans-serif;
     font-size: 20px;
     color: white;
+    position: relative;
 }
 #positiveOpinion {
     width: 234px;
@@ -552,7 +541,7 @@ h3#subheadline {
     background-color: green;
     color: white;
 }
-.modalTextArea {
+#opinion {
     width: 100%;
     border: none;
     text-align: right;
@@ -560,7 +549,7 @@ h3#subheadline {
     outline: none;
     height: 200px;
 }
-.md-content div button {
+.positiveModal div button {
     width: 120px;
     height: 55px;
     padding: 13px 0;
@@ -572,6 +561,54 @@ h3#subheadline {
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
 }
-.md-content div button:hover{
+.positiveModal div button:hover {
     opacity: 0.3;
+}
+.negativeModal {
+    color: black;
+    background: white;
+    border: 1px solid red;
+}
+.negativeModal h3 {
+    background-color: red;
+    color: white;
+}
+.negativeModal div button {
+    width: 120px;
+    height: 55px;
+    padding: 13px 0;
+    font-size: 20px;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+}
+.negativeModal div button:hover {
+    opacity: 0.3;
+}
+#opinionQuestion {
+    margin: 50px;
+    font-family: 'JF Light', sans-serif;
+}
+#closeButton {
+    display: none;
+}
+#disablingDiv {
+    position: absolute;
+    height: 51px;
+    width: 550px;
+}
+#searchIcon {
+
+position: relative;
+top: 6px;
+right: 10px;
+}
+
+#fullNameContainer{
+    overflow: hidden;
+    border: solid 1px black;
+    border-radius: 5px;
 }
