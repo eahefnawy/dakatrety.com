@@ -99,35 +99,20 @@ Template.teacherPage.events({
     },
     'click #submitOpinion': function(e, t) {
         if ($('#opinion').val() != "") {
-            var theOpinion = Opinions.insert({
-                opinion: $('#opinion').val(),
-                epoch: new Date().getTime(),
-                teacherId: this._id,
-                polarity: Session.get('polarity')
+
+
+
+            Meteor.call('insertOpinion', $('#opinion').val(), this._id, Session.get('polarity'), function(error, result) {
+                if (error) {
+                    console.log('insert opinion error')
+                } else {
+
+                    $('#opinion').val('');
+                    $('#closeButton').click();
+                }
             });
 
-            if (Session.get('polarity') == 'negative') {
 
-                Teachers.update(this._id, {
-                    $inc: {
-                        negativeOpinions: 1
-                    }
-                });
-            } else {
-                Teachers.update(this._id, {
-                    $inc: {
-                        positiveOpinions: 1
-                    }
-                });
-            }
-            updateGrade(this._id)
-            $('#opinion').val('');
-
-            myOpinions.insert({
-                teacherId: this._id,
-                opinionId: theOpinion
-            })
-            $('#closeButton').click();
         } else {
             console.log('empty')
         }

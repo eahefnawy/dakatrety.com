@@ -16,7 +16,7 @@ Teachers.allow({
     return true;
   },
   update: function (userId, doc, fields, modifier) {
-    return true;
+    return false;
   },
   remove: function (userId, doc) {
     return false;

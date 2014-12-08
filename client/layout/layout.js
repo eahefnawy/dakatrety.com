@@ -7,29 +7,30 @@ if (!Session.get('position')) {
 
 Template.layout.events({
     'submit #submitTeacher': function(e, t) {
-        e.preventDefault();
-    	if($('#addteacherTextField').val() != "")
-    	{
-        var newTeacher = Teachers.insert({
-            postition: Session.get('position'),
-            name: $('#addteacherTextField').val(),
-            fullName: Session.get('position') + $('#addteacherTextField').val(),
-            positiveOpinions: 0,
-            negativeOpinions: 0,
-            opinionsPercent: 0,
-            grade: 'U',
-            gradeL: 'UL',
-            courses: [],
-            epoch: new Date().getTime()
-        });
-        $('#addteacherTextField').val('');
-        Router.go('teacherPage', {
-            id: newTeacher
-        });
 
-    } else {
-    	console.log("empty")
-    }
+        e.preventDefault();
+
+
+
+        if ($('#addteacherTextField').val() != "") {
+
+
+            Meteor.call('insertTeacher', Session.get('position'), $('#addteacherTextField').val(), function(error, result) {
+                if (error) {
+                    console.log('insert teacher error')
+                } else {
+
+                    $('#addteacherTextField').val('');
+                    Router.go('teacherPage', {
+                        id: result
+                    });
+                }
+            });
+
+
+        } else {
+            console.log("empty")
+        }
     },
     'click .choosePos:nth-child(odd)': function(e, t) {
         Session.set('position', 'م. ')
@@ -37,9 +38,9 @@ Template.layout.events({
         Session.set('positionText', 'المعيد')
     },
     'click .choosePos:nth-child(even)': function(e, t) {
-            Session.set('position', 'د. ')
-    Session.set('positionHTML', '.د ')
-    Session.set('positionText', 'الدكتور')
+        Session.set('position', 'د. ')
+        Session.set('positionHTML', '.د ')
+        Session.set('positionText', 'الدكتور')
     }
 });
 
@@ -58,4 +59,3 @@ Template.layout.helpers({
         return Session.get('positionText');
     }
 });
-
