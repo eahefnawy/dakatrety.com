@@ -1,3 +1,8 @@
+Router.configure({
+    notFoundtemplate: "notFound"
+});
+
+
 Router.map(function() {
 
     this.route('home', {
@@ -86,5 +91,8 @@ Router.map(function() {
         }
 
     });
-
 });
+Router.configure({
+  notFoundTemplate: 'notFound'
+});
+Router.plugin('dataNotFound', {notFoundTemplate: 'notFound'});
