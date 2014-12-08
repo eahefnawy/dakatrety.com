@@ -1,0 +1,17 @@
+<template name="IAmAdminSoFuckOffTeachers">
+
+{{#if admin}}
+
+{{#each teacher}}
+{{>singleTeacher}}
+{{/each}}
+
+
+{{else}}
+<h1>eeh ya baba, heya wekala men 3'er bawab walla eh!</h1>
+{{/if}}
+</template>
+
+<template name="singleTeacher">
+<div class="teacherListItem"><a class="removeTeacher" href="#">remove</a> -  {{fullName}}</div>
+</template>

@@ -39,8 +39,51 @@ Router.map(function() {
         },
         waitOn: function(){
             return Meteor.subscribe('teacher', this.params.id);
+        }
+
+    });
+
+        this.route('IAmAdminSoFuckOffTeachers', {
+        path: '/IAmAdminSoFuckOff/teachers',
+        template: 'IAmAdminSoFuckOffTeachers',
+        notFoundTemplate: 'notFound',
+        loadingTemplate: 'spinner',
+        data: function() {
+            return Teachers.find();
         },
-        loadingTemplate: 'spinner'
+        onBeforeAction: function() {
+            if (Meteor.isClient) {
+                $('body,html').scrollTop(0)
+                this.next()
+            }
+
+        },
+        waitOn: function(){
+            return Meteor.subscribe('IAmAdminSoFuckOffTeachers');
+        }
+
+    });
+
+
+
+                this.route('IAmAdminSoFuckOffOpinions', {
+        path: '/IAmAdminSoFuckOff/opinions',
+        template: 'IAmAdminSoFuckOffOpinions',
+        notFoundTemplate: 'notFound',
+        loadingTemplate: 'spinner',
+        data: function() {
+            return Opinions.find();
+        },
+        onBeforeAction: function() {
+            if (Meteor.isClient) {
+                $('body,html').scrollTop(0)
+                this.next()
+            }
+
+        },
+        waitOn: function(){
+            return Meteor.subscribe('IAmAdminSoFuckOffOpinions');
+        }
 
     });
 

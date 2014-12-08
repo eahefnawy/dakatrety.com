@@ -612,3 +612,11 @@ right: 10px;
     border: solid 1px black;
     border-radius: 5px;
 }
+
+.teacherListItem, .OpinionListItem{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+

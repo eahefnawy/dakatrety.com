@@ -1,0 +1,17 @@
+<template name="IAmAdminSoFuckOffOpinions">
+
+{{#if admin}}
+
+{{#each opinion}}
+{{>singleOpinion}}
+{{/each}}
+
+
+{{else}}
+<h1>eeh ya baba, heya wekala men 3'er bawab walla eh!</h1>
+{{/if}}
+</template>
+
+<template name="singleOpinion">
+<div class="OpinionListItem"><a class="removeOpinion" href="#">remove</a> -  {{opinion}}</div>
+</template>

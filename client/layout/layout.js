@@ -9,8 +9,7 @@ Template.layout.events({
     'submit #submitTeacher': function(e, t) {
 
         e.preventDefault();
-
-
+        e.stopPropagation()
 
         if ($('#addteacherTextField').val() != "") {
 

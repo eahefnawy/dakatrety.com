@@ -99,7 +99,8 @@ Template.teacherPage.events({
     },
     'click #submitOpinion': function(e, t) {
         if ($('#opinion').val() != "") {
-
+            e.preventDefault()
+            e.stopPropagation()
 
 
             Meteor.call('insertOpinion', $('#opinion').val(), this._id, Session.get('polarity'), function(error, result) {
