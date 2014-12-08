@@ -43,7 +43,7 @@ Template.teacherPage.helpers({
     isDisabledClass: function() {
         return (myOpinions.findOne({
             teacherId: this._id
-        })) ? 'disabledButtons' : null;
+        })) ? 'disabledButtons' : false;
     },
     isDisabledCourses: function() {
         return (myOpinions.findOne({
@@ -98,20 +98,23 @@ Template.teacherPage.events({
 
     },
     'click #submitOpinion': function(e, t) {
-        if ($('#opinion').val() != "") {
+
+        if (($('#opinion').val() != "") && myOpinions.findOne({teacherId: this._id}) === undefined) {
             e.preventDefault()
             e.stopPropagation()
-
+            var teacherId = this._id;
 
             Meteor.call('insertOpinion', $('#opinion').val(), this._id, Session.get('polarity'), function(error, result) {
                 if (error) {
                     console.log('insert opinion error')
                 } else {
-
+                    myOpinions.insert({teacherId: teacherId, opinionId: result})
                     $('#opinion').val('');
                     $('#closeButton').click();
                 }
             });
+
+
 
 
         } else {
