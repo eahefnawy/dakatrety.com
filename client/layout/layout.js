@@ -11,9 +11,9 @@ Template.layout.events({
         e.preventDefault();
         e.stopPropagation()
 
-        if ($('#addteacherTextField').val() != "") {
+        if (($('#addteacherTextField').val() != "") && (Session.get('clickedSubmitTeacher') === false)) {
 
-
+            Session.set('clickedSubmitTeacher', true)
             Meteor.call('insertTeacher', Session.get('position'), $('#addteacherTextField').val(), function(error, result) {
                 if (error) {
                     console.log('insert teacher error')

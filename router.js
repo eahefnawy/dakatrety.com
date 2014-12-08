@@ -12,6 +12,8 @@ Router.map(function() {
         notFoundTemplate: 'notFound',
         onBeforeAction: function() {
             if (Meteor.isClient) {
+                Session.set('clickedOpinion', false)
+                Session.set('clickedSubmitTeacher', false)
                 $('body,html').scrollTop(0)
                 this.next()
                 Session.set('teachers', undefined)
@@ -37,6 +39,8 @@ Router.map(function() {
         },
         onBeforeAction: function() {
             if (Meteor.isClient) {
+                Session.set('clickedOpinion', false)
+                Session.set('clickedSubmitTeacher', false)
                 $('body,html').scrollTop(0)
                 this.next()
             }

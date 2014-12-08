@@ -13,6 +13,9 @@ admin: function(){
 
 Template.singleOpinion.events({
 	'click .removeOpinion': function(e, t){
+
+        e.preventDefault();
+        e.stopPropagation();
 		Meteor.call('IAmAdminSoFuckOffOpinionsRemove', this._id, function(error, result){
 			if (error) {
                     console.log('remove opinion error admin')
@@ -21,5 +24,6 @@ Template.singleOpinion.events({
                 }
 
 		})
+		return false
 	}
 })

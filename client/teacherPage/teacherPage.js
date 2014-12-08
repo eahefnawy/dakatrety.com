@@ -1,4 +1,5 @@
 var courses = [];
+
 Template.teacherPage.helpers({
     positiveOpinions: function() {
         return Opinions.find({
@@ -98,12 +99,14 @@ Template.teacherPage.events({
 
     },
     'click #submitOpinion': function(e, t) {
-
-        if (($('#opinion').val() != "") && myOpinions.findOne({teacherId: this._id}) === undefined) {
+        
+                    $('#closeButton').click();
+        if (($('#opinion').val() != "") && (myOpinions.findOne({teacherId: this._id}) === undefined) && (Session.get('clickedOpinion') === false)) {
             e.preventDefault()
             e.stopPropagation()
             var teacherId = this._id;
 
+            Session.set('clickedOpinion', true)
             Meteor.call('insertOpinion', $('#opinion').val(), this._id, Session.get('polarity'), function(error, result) {
                 if (error) {
                     console.log('insert opinion error')
