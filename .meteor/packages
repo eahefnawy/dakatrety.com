@@ -12,4 +12,5 @@ jeremy:selectize
 sacha:spin
 accounts-base
 accounts-password
+force-ssl
 

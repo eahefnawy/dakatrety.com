@@ -1,6 +1,5 @@
 Template.home.events({
     'keyup #search': function(e, t) {
-        //Teachers.findOne({name: {$regex : ".*ا.*", $options: "i"}})
         var regularEx = ".*" + $('#search').val() + ".*"
         var teachers = Teachers.find({$or: [{
             fullName: {

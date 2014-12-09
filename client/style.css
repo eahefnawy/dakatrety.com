@@ -449,7 +449,7 @@ h3#subheadline {
     float: left;
 }
 #positiveOpinions p {
-    margin: 50px 0;
+    margin: 30px 0;
     text-align: center;
     line-height: 1.4;
 }
@@ -619,4 +619,12 @@ right: 10px;
 }
 
 
+#positiveOpinions .divider, #negativeOpinions .divider {
+    margin: 0 auto;
+}
 
+footer {
+    margin: 30px auto;
+    color: red;
+    line-height: 1.5;
+}
