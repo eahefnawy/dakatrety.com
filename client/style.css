@@ -317,6 +317,7 @@ h3#subheadline {
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
+    margin-bottom: 0;
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     /* For Safari 3.1 to 6.0 */
