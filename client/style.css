@@ -629,3 +629,11 @@ footer {
     color: red;
     line-height: 1.5;
 }
+
+header {
+    
+color: white;
+background-color: red;
+padding: 10px;
+text-align: center;
+}
