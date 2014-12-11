@@ -1,14 +1,15 @@
 Teachers = new Mongo.Collection("teachers");
 Opinions = new Mongo.Collection("opinions");
+Info = new Mongo.Collection("info");
 
 if(Meteor.isServer){
 
 Meteor.publish("home", function () {
-  return Teachers.find();
+  return [Teachers.find(), Info.find()];
 });
 
 Meteor.publish("teacher", function (teacherId) {
-  return [Teachers.find(teacherId), Opinions.find({teacherId: teacherId})];
+  return [Teachers.find(teacherId), Opinions.find({teacherId: teacherId}), Info.find()];
 });
 
 Meteor.publish("IAmAdminSoFuckOffTeachers", function(){
@@ -29,6 +30,18 @@ Meteor.publish("IAmAdminSoFuckOffOpinions", function(){
     Accounts.createUser({username: 'admin', password: 'E60Q}jxg3yW8lmr'})
     console.log('created admin')
   }
+
+  Meteor.startup(function () {
+    if (Info.find().count() === 0) {
+      Info.insert({
+        name: "Info",
+        totalDrs: Teachers.find({postition: "د. "}).count(),
+        totalEngs: Teachers.find({postition: "م. "}).count(),
+        totalPositiveOpinions: Opinions.find({polarity: 'positive'}).count(),
+        totalNegativeOpinions: Opinions.find({polarity: 'negative'}).count()
+      });
+    }
+  });
 Teachers.allow({
   insert: function (userId, doc) {
     return true;

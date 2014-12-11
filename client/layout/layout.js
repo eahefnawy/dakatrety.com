@@ -56,5 +56,20 @@ Template.layout.helpers({
     },
     positionText: function() {
         return Session.get('positionText');
+    },
+    totalDrs: function(){
+        return Info.findOne().totalDrs
+    },
+    totalEngs: function(){
+        return Info.findOne().totalEngs
+        
+    },
+    totalPositiveOpinions: function(){
+        return Info.findOne().totalPositiveOpinions
+        
+    },
+    totalNegativeOpinions: function(){
+        return Info.findOne().totalNegativeOpinions
+        
     }
 });

@@ -1,5 +1,5 @@
 <template name="layout">
-<header>انا قاعد بتفرج على كل جاجة بتقولوها, و كلامكو حلو اوى ماشاء الله, حتى السلبى :). كل خمس دقايق رأى جديد. الله ينور</header>
+    <header>انا قاعد بتفرج على كل جاجة بتقولوها, و كلامكو حلو اوى ماشاء الله, حتى السلبى :). كل خمس دقايق رأى جديد. الله ينور</header>
     <a href="{{pathFor 'home'}}">
         <div id="logo"></div>
         <h3 id="logoText">دكاترتى.كوم</h3> </a>
@@ -7,7 +7,7 @@
         {{>yield}}
     </div>
 
-
+    <!--
     <div class="divider"></div>
     <h3>ملقتش الدكتور او المعيد بتاعك؟</h3>
     <div id="choosePosContainer">
@@ -27,8 +27,17 @@
 
 
     </div>
+    -->
+    <h1 id="statsHeader">لحد دلوقتى تم اضافة </h1>
+    <div id="longDivider"></div>
+    <div id="statsContainer">
+        <div class="singleStat">{{totalDrs}}<br>دكتور</div>
+        <div class="singleStat statsGreen">{{totalPositiveOpinions}}<br>رأى اجابى</div>
+        <div class="singleStat statsRed">{{totalNegativeOpinions}}<br>رأى سلبى</div>
+        <div class="singleStat">{{totalEngs}}<br>معيد</div>
+    </div>
     <footer>كل الأراء تعبر عن صاحبها و فريق عمل الموقع لا يوافق ولا يعارض اى رأى و بيحذف اى كومنت خارج عن الحدود
 
 
-</footer>
+    </footer>
 </template>

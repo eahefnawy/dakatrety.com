@@ -15,8 +15,9 @@ Router.map(function() {
                 Session.set('clickedOpinion', false)
                 Session.set('clickedSubmitTeacher', false)
                 $('body,html').scrollTop(0)
+                Session.set('teachers', [])
+                Session.set('notSearching', true)
                 this.next()
-                Session.set('teachers', undefined)
             }
 
         },

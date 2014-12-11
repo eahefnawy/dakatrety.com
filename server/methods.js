@@ -15,6 +15,7 @@ Meteor.methods({
                 courses: [],
                 epoch: new Date().getTime()
             });
+            updateInfo()
             return newTeacher
         } else {
             throw new Meteor.Error("FuckOff",
@@ -46,6 +47,7 @@ Meteor.methods({
                     }
                 });
             }
+            updateInfo()
             updateGrade(teacherId)
             return theOpinion;
         } else {
@@ -61,6 +63,7 @@ Meteor.methods({
             Opinions.remove({
                 teacherId: teacherId
             })
+            updateInfo()
         } else {
 
             throw new Meteor.Error("FuckOff",
@@ -84,7 +87,7 @@ Meteor.methods({
                     }
                 });
             }
-
+            updateInfo()
             updateGrade(Opinions.findOne(opinionId).teacherId)
             Opinions.remove(opinionId);
         } else {
@@ -95,9 +98,14 @@ Meteor.methods({
     },
 
 
-    changeName: function(teacherId, newName, pos){
+    changeName: function(teacherId, newName, pos) {
         if (Meteor.user().username == 'admin') {
-            Teachers.update(teacherId, {$set: {name: newName, fullName: pos + newName}});
+            Teachers.update(teacherId, {
+                $set: {
+                    name: newName,
+                    fullName: pos + newName
+                }
+            });
         } else {
 
             throw new Meteor.Error("FuckOff",

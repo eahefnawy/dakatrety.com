@@ -5,6 +5,8 @@
     <h3 id="subheadline">دكاترتى.كوم بتعرفك على احسن دكاترة و معيدين الأكاديمية و بتديك<br>
  فرصة تعبر عن رأيك فيهم بصراحة و بدون ذكر اسمك</h3>
     <div class="divider"></div>
+    <h1 id="searchTitle">اكتب اسم الدكتور او المعيد بالعربى<br>
+ و احنا حنجبهولك</h1>
     <div id="searchContainer">
         <input id="search" type="text" placeholder="ابحث عن دكتور او معيد">
         <img id="searchIcon" width="40" height="40" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMuSURBVFiFxZhLSFVBGMd/czK0B9qqFIMMjNpIadEDIXBT0KKghQRlkC0qiBbVQno/yCB60iIJgkgiol21KEiCgqC02gQlPSikNAo3ETdL/VrMuXo8Z86cOdcj/mHgMvd+//nxfXO+M3OViOAqpVQNsB5YCVT6owzoA74BX4AO4L6I9Dkb2yQi1gEUA3uBT4A4jmHgGbAuyT9x/QS4Jj8rrmCm8RiozRQQKAHaxwkWHH+A5kwAgQqg03HhH8ArIOf4+8uAVzAgMB14aVngPdAKbATmBeKKgMVAM3AF+G3xOF0QIKCAO5ZNfxGY5mQK1cBTC+SWQgB3xJh9BFan3jvgAftiyp8LViAREJgB9BqMPgNlhT6BvneDX4Gwd3sawKMxZW0YD1wA8lyM/xKHWBTw1WBwKQs4f5Fi4I1hjTYXwGUx+87pgUgBWWsodS+gbHEesIGo7opIzjBfsETkNbpNBVUOrLLFecBSw3xnRlxhdRnmTOuPyEOfSMJ6kQlOVCbAcluACbBfRD5khjRWJsAKW4CH7oFB/cwMJyqTd5EtwEMfNINaoJQqzQxprGoNc922AA/dA4NS6NYzETL5vrUFeOieF9byTHCiMgG+swV4wAPDfH0mOAEppUqIlniQaG+MqBT4S/RtsibjN8kFwxpPXA8L9wzBPcCsjODiTjSJh5G8QV2MwY0M4MowX7weOcUHjG4aTAQ4DEwpEG4O8DDGd0VawLnA9xiz58CilHCN6EuVya/D2SdkWg8MxJjmgP3AbAuUAhYCt2M88uMf0OgCqHzjESmlmoDr6BYUpx707a/L/1yD7nF16K7goiGgSURuWX8Vk4m1QH9CFrIYg8Bm5xKHIKtxv8AnldN2BR0CtqYGDOypTejXYVqwAaANqPK9WhMgt6UGDIBORV8NrhH/pAvwC703zwOVBp9TlthhYHviQ5IkpZQHzGf0/8GZfoa7RSR8MjLFnwQOxXwtwE4RuTo6U0ADHu8AjidkcleqEk8Q5DELpAC7JxXQhzySALnH1ownXCJyAg0Zp6pJzWAgkweJZu/spJc4BHkgAHcmP5+6zUyklFIt6ENyS37uPx7vw8sCWeJDAAAAAElFTkSuQmCC" />
@@ -12,8 +14,38 @@
 
 
     <div id="teacherCardContainer">
-{{#each teachers}}{{>teacherCard}}{{/each}}
+
+{{#if notSearching}}
+<h1 id="notSearchingText">...نتائج البحث حتظهر هنا</h1>
+{{else}}
+{{#if notFound}}
+<h1 id="notFoundText">شكله كدة مش موجود عندنا</h1>
+    <h3>بس اشطة, تقدر تضيفه انت فى البوكس التحت ده</h3>
+    <div id="choosePosContainer">
+        <div class="choosePos" style="background-color: {{engButtonBG}};">معيد</div>
+        <div class="choosePos" style="background-color: {{drButtonBG}};">دكتور</div>
+
     </div>
 
-    
+    <div id="addTeacherContainer">
+        <form id="submitTeacher">
+        <div id="fullNameContainer">
+            <div id="addteacherPos">{{positionHTML}}</div>
+            <input id="addteacherTextField" type="text" placeholder="اكتب اسم {{positionText}}">
+            </div>
+            <button type="submit" class="addTeacherButton">انشاء تقييم جديد</button>
+        </form>
+
+
+    </div>
+{{else}}
+{{#each teachers}}{{>teacherCard}}{{/each}}
+{{/if}}
+{{/if}}
+
+
+
+    </div>
+
+
 </template>
