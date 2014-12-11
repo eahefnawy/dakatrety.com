@@ -703,3 +703,7 @@ color: grey;
     color: red;
 
 }
+
+#linkToHome {
+    display: inline-block;
+}
