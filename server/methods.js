@@ -49,16 +49,18 @@ Meteor.methods({
             updateGrade(teacherId)
             return theOpinion;
         } else {
-        	throw new Meteor.Error("FuckOff",
+            throw new Meteor.Error("FuckOff",
                 "Seems that you're trying to crack the site, so fuck off!");
         }
     },
 
 
-    IAmAdminSoFuckOffTeachersRemove: function(teacherId){
-        if(Meteor.user().username == 'admin'){
+    IAmAdminSoFuckOffTeachersRemove: function(teacherId) {
+        if (Meteor.user().username == 'admin') {
             Teachers.remove(teacherId);
-            Opinions.remove({teacherId: teacherId})
+            Opinions.remove({
+                teacherId: teacherId
+            })
         } else {
 
             throw new Meteor.Error("FuckOff",
@@ -66,8 +68,8 @@ Meteor.methods({
         }
     },
 
-        IAmAdminSoFuckOffOpinionsRemove: function(opinionId){
-        if(Meteor.user().username == 'admin'){
+    IAmAdminSoFuckOffOpinionsRemove: function(opinionId) {
+        if (Meteor.user().username == 'admin') {
             if (Opinions.findOne(opinionId).polarity == 'negative') {
 
                 Teachers.update(Opinions.findOne(opinionId).teacherId, {
@@ -85,6 +87,17 @@ Meteor.methods({
 
             updateGrade(Opinions.findOne(opinionId).teacherId)
             Opinions.remove(opinionId);
+        } else {
+
+            throw new Meteor.Error("FuckOff",
+                "Seems that you're trying to crack the site, so fuck off!");
+        }
+    },
+
+
+    changeName: function(teacherId, newName, pos){
+        if (Meteor.user().username == 'admin') {
+            Teachers.update(teacherId, {$set: {name: newName, fullName: pos + newName}});
         } else {
 
             throw new Meteor.Error("FuckOff",

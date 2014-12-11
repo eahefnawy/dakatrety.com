@@ -23,10 +23,20 @@ Template.singleTeacher.events({
             if (error) {
                 console.log('remove teacher error admin')
             } else {
-                console.log('done')
+                console.log('teacher removed')
             }
 
         })
         return false;
+    },
+    'change .changeName': function(e, t){
+        
+        Meteor.call('changeName', this._id, $('.changeName').val(), this.postition, function(error, result){
+            if (error) {
+                console.log('change name teacher error admin')
+            } else {
+                console.log('done changing name')
+            }
+        })
     }
 })
