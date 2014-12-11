@@ -29,9 +29,9 @@ Template.singleTeacher.events({
         })
         return false;
     },
-    'change .changeName': function(e, t){
+    'click .changeNameButton': function(e, t){
         
-        Meteor.call('changeName', this._id, $('.changeName').val(), this.postition, function(error, result){
+        Meteor.call('changeName', this._id, t.$('.changeName').val(), this.postition, function(error, result){
             if (error) {
                 console.log('change name teacher error admin')
             } else {
