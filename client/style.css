@@ -700,9 +700,7 @@ color: grey;
 
 #notFoundText {
     font-size: 40px;
-    color: black;
-    position: relative;
-    top: 50px;
+    color: red;
 
 }
 
