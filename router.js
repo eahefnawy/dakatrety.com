@@ -21,7 +21,7 @@ Router.map(function() {
             }
 
         },
-        waitOn: function(){
+        waitOn: function() {
             return Meteor.subscribe('home');
         },
         loadingTemplate: 'spinner'
@@ -47,13 +47,13 @@ Router.map(function() {
             }
 
         },
-        waitOn: function(){
+        waitOn: function() {
             return Meteor.subscribe('teacher', this.params.id);
         }
 
     });
 
-        this.route('IAmAdminSoFuckOffTeachers', {
+    this.route('IAmAdminSoFuckOffTeachers', {
         path: '/IAmAdminSoFuckOff/teachers',
         template: 'IAmAdminSoFuckOffTeachers',
         notFoundTemplate: 'notFound',
@@ -68,7 +68,7 @@ Router.map(function() {
             }
 
         },
-        waitOn: function(){
+        waitOn: function() {
             return Meteor.subscribe('IAmAdminSoFuckOffTeachers');
         }
 
@@ -76,7 +76,7 @@ Router.map(function() {
 
 
 
-                this.route('IAmAdminSoFuckOffOpinions', {
+    this.route('IAmAdminSoFuckOffOpinions', {
         path: '/IAmAdminSoFuckOff/opinions',
         template: 'IAmAdminSoFuckOffOpinions',
         notFoundTemplate: 'notFound',
@@ -91,13 +91,19 @@ Router.map(function() {
             }
 
         },
-        waitOn: function(){
+        waitOn: function() {
             return Meteor.subscribe('IAmAdminSoFuckOffOpinions');
         }
 
     });
+
+
+
+
 });
 Router.configure({
-  notFoundTemplate: 'notFound'
+    notFoundTemplate: 'notFound'
 });
-Router.plugin('dataNotFound', {notFoundTemplate: 'notFound'});
+Router.plugin('dataNotFound', {
+    notFoundTemplate: 'notFound'
+});

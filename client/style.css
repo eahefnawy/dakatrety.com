@@ -712,3 +712,34 @@ color: grey;
     font-size: 40px;
     color: black;
 }
+
+#longDividerChat {
+    width: 1000px;
+    height: 2px;
+    background-color: black;
+    margin: 30px auto;
+
+}
+
+#chatHeader {
+
+background-color: white;
+display: inline-block;
+width: 520px;
+position: relative;
+top: 60px;
+font-size: 40px;
+}
+
+#tlkio {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#header .header-bar {
+    background-color: black!important;
+}
+
+.info {
+    display: none !important;
+}
