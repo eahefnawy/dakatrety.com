@@ -57,19 +57,29 @@ Template.layout.helpers({
     positionText: function() {
         return Session.get('positionText');
     },
-    totalDrs: function(){
+    totalDrs: function() {
         return Info.findOne().totalDrs
     },
-    totalEngs: function(){
+    totalEngs: function() {
         return Info.findOne().totalEngs
-        
+
     },
-    totalPositiveOpinions: function(){
+    totalPositiveOpinions: function() {
         return Info.findOne().totalPositiveOpinions
-        
+
     },
-    totalNegativeOpinions: function(){
+    totalNegativeOpinions: function() {
         return Info.findOne().totalNegativeOpinions
-        
+
     }
 });
+
+Template.layout.rendered = function(){
+    var url = "https://dakatrety.com";
+        $.getJSON("https://graph.facebook.com/?ids=" + url, function(data) {
+            if (data[url].shares !== undefined) {
+                console.log(data[url].shares)
+                $('#shareTextNumber').text(data[url].shares)
+            }
+        });
+}

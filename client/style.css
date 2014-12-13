@@ -743,3 +743,62 @@ font-size: 40px;
 .info {
     display: none !important;
 }
+
+#chatContainer {
+    position: relative;
+    width: 800px;
+    margin: auto;
+}
+
+#shareButton {
+    width: 330px;
+    height: 50px;
+    background-color: #000080;
+    border-radius: 5px;
+    position: absolute;
+    left: 37%;   transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+
+
+}
+
+#shareButton:hover {
+    opacity: 0.3;
+}
+
+#facebookIcon {
+
+position: relative;
+top: 9px;
+right: 145px;
+
+}
+
+#shareText {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    position: relative;
+
+}
+
+#shareTextContent {
+
+position: relative;
+bottom: 26px;
+right: 15px;
+}
+
+#shareTextNumber {
+
+position: relative;
+bottom: 24px;
+right: 70px;
+}
+
+#shareLink {
+
+position: absolute;
+left: 30%;
+}
