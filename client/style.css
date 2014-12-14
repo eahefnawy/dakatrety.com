@@ -305,9 +305,7 @@ h3#subheadline {
     overflow: hidden;
     margin-bottom: 0;
 }
-#addTeacherContainer form {
-}
-.addTeacherButton {
+#addTeacherContainer form {} .addTeacherButton {
     width: 250px;
     height: 50px;
     padding: 13px 0;
@@ -603,41 +601,35 @@ h3#subheadline {
     width: 550px;
 }
 #searchIcon {
-
-position: relative;
-top: 6px;
-right: 10px;
+    position: relative;
+    top: 6px;
+    right: 10px;
 }
-
-#fullNameContainer{
+#fullNameContainer {
     overflow: hidden;
     border: solid 1px black;
     border-radius: 5px;
 }
-
-.teacherListItem, .OpinionListItem{
+.teacherListItem, .OpinionListItem {
     text-align: left;
     margin-bottom: 20px;
 }
-
-
 #positiveOpinions .divider, #negativeOpinions .divider {
     margin: 0 auto;
 }
-
 footer {
-color: white;
-background-color: red;
-padding: 10px;
-text-align: center;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    text-align: center;
 }
-
 header {
-
-color: white;
-background-color: green;
-padding: 10px;
-text-align: center;
+    color: white;
+    background-color: green;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
 }
 
 #longDivider {
@@ -645,26 +637,21 @@ text-align: center;
     height: 2px;
     background-color: black;
     margin: 30px auto;
-
 }
-
 #statsHeader {
-
-background-color: white;
-display: inline-block;
-width: 450px;
-position: relative;
-top: 60px;
-font-size: 40px;
+    background-color: white;
+    display: inline-block;
+    width: 450px;
+    position: relative;
+    top: 60px;
+    font-size: 40px;
 }
-
 #statsContainer {
     width: 1080px;
     height: 150px;
     margin: 50px auto;
     overflow: hidden;
 }
-
 .singleStat {
     width: 250px;
     height: 135px;
@@ -678,127 +665,93 @@ font-size: 40px;
     font-size: 50px;
     padding-top: 15px;
 }
-
 .statsRed {
     background-color: red;
 }
-
 .statsGreen {
     background-color: green;
 }
-
 #searchTitle {
     font-size: 40px;
 }
-
 #notSearchingText {
-font-size: 40px;
-margin: 50px;
-color: grey;
+    font-size: 40px;
+    margin: 50px;
+    color: grey;
 }
-
-
 #notFoundText {
     font-size: 40px;
     color: red;
-
 }
-
 #linkToHome {
     display: inline-block;
 }
-
 #notFoundPageText {
     font-size: 40px;
     color: black;
 }
-
 #longDividerChat {
     width: 1000px;
     height: 2px;
     background-color: black;
     margin: 30px auto;
-
 }
-
 #chatHeader {
-
-background-color: white;
-display: inline-block;
-width: 520px;
-position: relative;
-top: 60px;
-font-size: 40px;
+    background-color: white;
+    display: inline-block;
+    width: 520px;
+    position: relative;
+    top: 60px;
+    font-size: 40px;
 }
-
 #tlkio {
     margin: 0 auto;
     margin-top: 50px;
 }
-
 #header .header-bar {
     background-color: black!important;
 }
-
 .info {
     display: none !important;
 }
-
 #chatContainer {
     position: relative;
     width: 800px;
     margin: auto;
 }
-
 #shareButton {
-    width: 330px;
+    width: 280px;
     height: 50px;
     background-color: #000080;
     border-radius: 5px;
     position: absolute;
-    left: 37%;   transition: opacity 1s;
+    top: 60px;
+    right: 20px;
+    transition: opacity 1s;
     -webkit-transition: opacity 1s;
-
-
 }
-
 #shareButton:hover {
     opacity: 0.3;
 }
-
 #facebookIcon {
-
-position: relative;
-top: 9px;
-right: 145px;
-
+    position: relative;
+    top: 9px;
+    right: 115px;
 }
-
 #shareText {
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: right;
     position: relative;
-
 }
-
 #shareTextContent {
-
-position: relative;
-bottom: 26px;
-right: 15px;
+    position: relative;
+    bottom: 22px;
+    right: 15px;
 }
-
 #shareTextNumber {
-
-position: relative;
-bottom: 24px;
-right: 70px;
-}
-
-#shareLink {
-
-position: absolute;
-left: 30%;
+    position: relative;
+    bottom: 20px;
+    right: 46px;
 }
