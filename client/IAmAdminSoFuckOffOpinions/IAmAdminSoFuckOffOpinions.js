@@ -68,7 +68,7 @@ Template.singleOpinion.events({
         e.preventDefault();
         e.stopPropagation();
         
-        var placeholderText = "الكومنت دة اتشال! بليز يا جماعة لو عايزين تقولو رأيكو قولو باحترم و موضوعية, حتى لو كان كلام سلبى, مكنش كدة يبقى بلاش احسن"
+        var placeholderText = "الكومنت دة اتشال! بليز يا جماعة لو عايزين تقولو رأيكو قولو باحترام و موضوعية, حتى لو كان كلام سلبى, مكنش كدة يبقى بلاش احسن"
   
 		Meteor.call('offensiveOpinion', this._id, placeholderText, function(error, result){
 			if (error) {
