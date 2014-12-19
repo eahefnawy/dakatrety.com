@@ -613,7 +613,7 @@ h3#subheadline {
     border: solid 1px black;
     border-radius: 5px;
 }
-.teacherListItem, .OpinionListItem {
+.teacherListItem {
     text-align: left;
     margin-bottom: 20px;
 }
@@ -952,4 +952,49 @@ header {
         margin-top: 30px;
     }
 
+}
+
+#opinionsAdminContainer {
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#opinionsAdminPositiveContainer {
+    float: left;
+    width: 600px;
+    background-color: lightgreen;
+}
+
+#opinionsAdminNegativeContainer {
+    float: right;
+    width: 600px;
+    background-color: lightpink;
+}
+
+.OpinionListItem {
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+.commandsBar a{
+    color: red;
+    text-decoration: underline;
+}
+
+.commandsBar {
+    margin-bottom: 30px;
+}
+
+.infoBar {
+    margin-bottom: 30px;
+}
+
+.isOffensive {
+    opacity: 0.3;
+}
+
+.singleOpinionTextarea {
+    width: 590px;
 }

@@ -170,3 +170,13 @@ Template.teacherPage.rendered = function() {
         $('#negatveiOpinion').off()
         }
 }
+
+Template.oneOpinion.helpers({
+    isOffensive: function(){
+        if(this.isOffensive){
+            return "isOffensive"
+        } else {
+            return false
+        }
+    }
+})

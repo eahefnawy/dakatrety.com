@@ -111,5 +111,64 @@ Meteor.methods({
             throw new Meteor.Error("FuckOff",
                 "Seems that you're trying to crack the site, so fuck off!");
         }
+    },
+    changeOpinion: function(opinionId, newOpinion) {
+        if (Meteor.user().username == 'admin') {
+            Opinions.update(opinionId, {
+                $set: {
+                    opinion: newOpinion
+                }
+            });
+        } else {
+
+            throw new Meteor.Error("FuckOff",
+                "Seems that you're trying to crack the site, so fuck off!");
+        }
+    },
+    reverseOpinion: function(opinionId, newPolarity, teacherId) {
+        if (Meteor.user().username == 'admin') {
+            Opinions.update(opinionId, {
+                $set: {
+                    polarity: newPolarity
+                }
+            });
+
+            if (newPolarity === "negative") {
+                Teachers.update(Opinions.findOne(opinionId).teacherId, {
+                    $inc: {
+                        negativeOpinions: 1,
+                        positiveOpinions: -1
+                    }
+                });
+            } else {
+                Teachers.update(Opinions.findOne(opinionId).teacherId, {
+                    $inc: {
+                        negativeOpinions: -1,
+                        positiveOpinions: 01
+                    }
+                });
+
+            }
+            updateGrade(teacherId)
+            updateInfo()
+        } else {
+
+            throw new Meteor.Error("FuckOff",
+                "Seems that you're trying to crack the site, so fuck off!");
+        }
+    },
+    offensiveOpinion: function(opinionId, placeholderText) {
+        if (Meteor.user().username == 'admin') {
+            Opinions.update(opinionId, {
+                $set: {
+                    isOffensive: true,
+                    opinion: placeholderText
+                }
+            });
+        } else {
+
+            throw new Meteor.Error("FuckOff",
+                "Seems that you're trying to crack the site, so fuck off!");
+        }
     }
 });

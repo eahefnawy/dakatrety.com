@@ -19,7 +19,7 @@ Meteor.publish("IAmAdminSoFuckOffTeachers", function(){
 })
 
 Meteor.publish("IAmAdminSoFuckOffOpinions", function(){
-  return Opinions.find();
+  return [Opinions.find(), Teachers.find()];
 
 
 })

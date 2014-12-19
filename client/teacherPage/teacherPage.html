@@ -44,8 +44,7 @@
     <div id="opinionsContainer">
     <div id="positiveOpinions">
     {{#each positiveOpinions}}
-    <p>{{opinion}}</p>
-    <div class="divider"></div>
+{{>oneOpinion}}
     {{/each}}
     </div>
 
@@ -55,8 +54,7 @@
 
 
     {{#each negativeOpinions}}
-    <p>{{opinion}}</p>
-    <div class="divider"></div>
+{{>oneOpinion}}
     {{/each}}
 
     </div>
@@ -65,3 +63,8 @@
 <div class="md-overlay"></div>
 </template>
 
+<template name="oneOpinion">
+
+    <p class="{{isOffensive}}">{{opinion}}</p>
+    <div class="divider"></div>
+</template>
