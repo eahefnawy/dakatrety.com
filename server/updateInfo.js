@@ -1,5 +1,4 @@
 updateInfo = function(){
-
         Info.update({name: "Info"}, {$set: {
         	totalDrs: Teachers.find({postition: "د. "}).count(),
         	totalEngs: Teachers.find({postition: "م. "}).count(),

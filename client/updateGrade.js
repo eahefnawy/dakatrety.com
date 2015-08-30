@@ -36,7 +36,6 @@ updateGrade = function(teacherId) {
         if (opinionsPercent >= 50) return 'D';
         if (opinionsPercent >= 0) return 'F';
     }
-
+    
     Teachers.update(teacherObj._id, {$set: {opinionsPercent: opinionsPercent,gradeL: getGradeL(opinionsPercent),grade: getGrade(opinionsPercent)}})
-
 }

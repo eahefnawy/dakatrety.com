@@ -1,5 +1,4 @@
 if (!Session.get('position')) {
-
     Session.set('position', 'د. ')
     Session.set('positionHTML', '.د ') //arabic DOT doesn't render probably when there's space after it
     Session.set('positionText', 'الدكتور')
@@ -25,8 +24,6 @@ Template.layout.events({
                     });
                 }
             });
-
-
         } else {
             console.log("empty")
         }
@@ -49,7 +46,6 @@ Template.layout.helpers({
     },
     drButtonBG: function() {
         return (Session.get('position') == 'د. ') ? 'black' : false;
-
     },
     positionHTML: function() {
         return Session.get('positionHTML');
@@ -62,15 +58,12 @@ Template.layout.helpers({
     },
     totalEngs: function() {
         return Info.findOne().totalEngs
-
     },
     totalPositiveOpinions: function() {
         return Info.findOne().totalPositiveOpinions
-
     },
     totalNegativeOpinions: function() {
         return Info.findOne().totalNegativeOpinions
-
     }
 });
 

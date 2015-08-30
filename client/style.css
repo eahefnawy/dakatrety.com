@@ -1,1000 +1,972 @@
 .A, .AMinus, .APlus, .B, .BMinus, .BPlus, .C, .CMinus, .CPlus, .D, .F, .U, .AL, .AMinusL, .APlusL, .BL, .BMinusL, .BPlusL, .CL, .CMinusL, .CPlusL, .DL, .FL, .UL, .logo, .like, .dislike {
-    background: url(sprites.png) no-repeat;
+  background: url(sprites.png) no-repeat;
 }
 .A {
-    background-position: -4px -3px;
-    width: 51px;
-    height: 60px;
+  background-position: -4px -3px;
+  width: 51px;
+  height: 60px;
 }
 .AMinus {
-    background-position: -141px -4px;
-    width: 51px;
-    height: 60px;
+  background-position: -141px -4px;
+  width: 51px;
+  height: 60px;
 }
 .APlus {
-    background-position: -272px -71px;
-    width: 51px;
-    height: 60px;
+  background-position: -272px -71px;
+  width: 51px;
+  height: 60px;
 }
 .B {
-    background-position: -336px 0;
-    width: 51px;
-    height: 60px;
+  background-position: -336px 0;
+  width: 51px;
+  height: 60px;
 }
 .BMinus {
-    background-position: -339px -74px;
-    width: 51px;
-    height: 60px;
+  background-position: -339px -74px;
+  width: 51px;
+  height: 60px;
 }
 .BPlus {
-    background-position: -274px -1px;
-    width: 51px;
-    height: 60px;
+  background-position: -274px -1px;
+  width: 51px;
+  height: 60px;
 }
 .C {
-    background-position: -205px -69px;
-    width: 51px;
-    height: 60px;
+  background-position: -205px -69px;
+  width: 51px;
+  height: 60px;
 }
 .CMinus {
-    background-position: -210px 0;
-    width: 51px;
-    height: 60px;
+  background-position: -210px 0;
+  width: 51px;
+  height: 60px;
 }
 .CPlus {
-    background-position: -3px -74px;
-    width: 51px;
-    height: 60px;
+  background-position: -3px -74px;
+  width: 51px;
+  height: 60px;
 }
 .D {
-    background-position: -139px -69px;
-    width: 51px;
-    height: 60px;
+  background-position: -139px -69px;
+  width: 51px;
+  height: 60px;
 }
 .F {
-    background-position: -63px -71px;
-    width: 51px;
-    height: 60px;
+  background-position: -63px -71px;
+  width: 51px;
+  height: 60px;
 }
 .U {
-    background-position: -68px -3px;
-    width: 51px;
-    height: 60px;
+  background-position: -68px -3px;
+  width: 51px;
+  height: 60px;
 }
 .AL {
-    background-position: -419px -126px;
-    width: 85px;
-    height: 100px;
+  background-position: -419px -126px;
+  width: 85px;
+  height: 100px;
 }
 .AMinusL {
-    background-position: -517px -129px;
-    width: 85px;
-    height: 100px;
+  background-position: -517px -129px;
+  width: 85px;
+  height: 100px;
 }
 .APlusL {
-    background-position: -521px -13px;
-    width: 85px;
-    height: 100px;
+  background-position: -521px -13px;
+  width: 85px;
+  height: 100px;
 }
 .BL {
-    background-position: -414px -14px;
-    width: 85px;
-    height: 100px;
+  background-position: -414px -14px;
+  width: 85px;
+  height: 100px;
 }
 .BMinusL {
-    background-position: -313px -264px;
-    width: 85px;
-    height: 100px;
+  background-position: -313px -264px;
+  width: 85px;
+  height: 100px;
 }
 .BPlusL {
-    background-position: -207px -264px;
-    width: 85px;
-    height: 100px;
+  background-position: -207px -264px;
+  width: 85px;
+  height: 100px;
 }
 .CL {
-    background-position: -105px -266px;
-    width: 85px;
-    height: 100px;
+  background-position: -105px -266px;
+  width: 85px;
+  height: 100px;
 }
 .CMinusL {
-    background-position: 0 -269px;
-    width: 85px;
-    height: 100px;
+  background-position: 0 -269px;
+  width: 85px;
+  height: 100px;
 }
 .CPlusL {
-    background-position: -329px -149px;
-    width: 85px;
-    height: 100px;
+  background-position: -329px -149px;
+  width: 85px;
+  height: 100px;
 }
 .DL {
-    background-position: -215px -147px;
-    width: 85px;
-    height: 100px;
+  background-position: -215px -147px;
+  width: 85px;
+  height: 100px;
 }
 .FL {
-    background-position: -105px -148px;
-    width: 85px;
-    height: 100px;
+  background-position: -105px -148px;
+  width: 85px;
+  height: 100px;
 }
 .UL {
-    background-position: -3px -152px;
-    width: 85px;
-    height: 100px;
+  background-position: -3px -152px;
+  width: 85px;
+  height: 100px;
 }
 @font-face {
-    font-family: 'JF Light';
-    src: url('/fonts/JF-Flat-light.woff') format('woff'),
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    
-    url('/fonts/JF-Flat-light.ttf') format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: 'JF Light';
+  src: url('/fonts/JF-Flat-light.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url('/fonts/JF-Flat-light.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 @font-face {
-    font-family: 'JF Regular';
-    src: url('/fonts/JF-Flat-regular.woff') format('woff'),
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    
-    url('/fonts/JF-Flat-regular.ttf') format('truetype');
-    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: 'JF Regular';
+  src: url('/fonts/JF-Flat-regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url('/fonts/JF-Flat-regular.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 body {
-    font-family: 'JF Regular', sans-serif;
-    font-size: 20px;
-    text-align: center;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 a, a:visited, a:link {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 h3 {
-    text-align: center;
-    font-size: 30px;
+  text-align: center;
+  font-size: 30px;
 }
 h1 {
-    font-family: 'JF Regular', sans-serif;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 30px;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 h3#logoText {
-    font-family: 'JF Light', sans-serif;
-    font-size: 40px;
-    text-align: center;
-    margin: 5px;
+  font-family: 'JF Light', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 5px;
 }
 h1#headline {
-    margin: 60px auto;
-    width: 800px;
+  margin: 60px auto;
+  width: 800px;
 }
 h3#subheadline {
-    width: 800px;
-    margin: auto;
-    font-family: 'JF Light', sans-serif;
-    font-size: 30px;
-    text-align: center;
+  width: 800px;
+  margin: auto;
+  font-family: 'JF Light', sans-serif;
+  font-size: 30px;
+  text-align: center;
 }
 .dislike, .like, #logo {
-    background: url(sprites.png) no-repeat;
+  background: url(sprites.png) no-repeat;
 }
 #layoutContainer {
-    min-height: 200px;
+  min-height: 200px;
 }
 #logo {
-    background-position: -466px -248px;
-    width: 133px;
-    height: 150px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 5px;
+  background-position: -466px -248px;
+  width: 133px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .divider {
-    margin: 60px auto;
-    width: 260px;
-    height: 2px;
-    background-color: black;
+  margin: 60px auto;
+  width: 260px;
+  height: 2px;
+  background-color: black;
 }
 #searchContainer {
-    width: 860px;
-    height: 72px;
-    margin: 40px auto;
-    border: solid 1px black;
-    border-radius: 5px;
+  width: 860px;
+  height: 72px;
+  margin: 40px auto;
+  border: solid 1px black;
+  border-radius: 5px;
 }
 #search {
-    width: 800px;
-    height: 70px;
-    border: none;
-    display: inline-block;
-    outline: none;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    color: grey;
+  width: 800px;
+  height: 70px;
+  border: none;
+  display: inline-block;
+  outline: none;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: grey;
 }
 #teacherCardContainer {
-    width: 850px;
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 850px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .teacherCard {
-    width: 400px;
-    height: 60px;
-    margin: 30px 0;
-    float: left;
-    overflow: hidden;
+  width: 400px;
+  height: 60px;
+  margin: 30px 0;
+  float: left;
+  overflow: hidden;
 }
 .teacherCard:nth-child(even) {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 .teacherCardLeft {
-    float: left;
-    width: 329px;
-    height: 60px;
-    margin-right: 20px;
+  float: left;
+  width: 329px;
+  height: 60px;
+  margin-right: 20px;
 }
 .teacherCardName {
-    width: 329px;
-    height: 58px;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: right;
-    line-height: 1.3;
+  width: 329px;
+  height: 58px;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 1.3;
 }
 #choosePosContainer {
-    width: 250px;
-    height: auto;
-    margin: 30px auto;
-    overflow: hidden;
+  width: 250px;
+  height: auto;
+  margin: 30px auto;
+  overflow: hidden;
 }
 .choosePos {
-    width: 120px;
-    height: 25px;
-    background-color: grey;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    float: left;
-    border-radius: 5px;
-    padding: 13px 0;
-    transition: background-color 1s;
-    -webkit-transition: background-color 1s;
-    /* For Safari 3.1 to 6.0 */
-    
-    cursor: pointer;
+  width: 120px;
+  height: 25px;
+  background-color: grey;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  float: left;
+  border-radius: 5px;
+  padding: 13px 0;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  /* For Safari 3.1 to 6.0 */
+  cursor: pointer;
 }
 .choosePos:nth-child(even) {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .choosePos:hover {
-    background-color: black;
+  background-color: black;
 }
 #addteacherTextField {
-    width: 350px;
-    height: 70px;
-    border: none;
-    display: block;
-    outline: none;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: right;
-    color: grey;
-    float: right;
-    margin: 0 auto;
+  width: 350px;
+  height: 70px;
+  border: none;
+  display: block;
+  outline: none;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: right;
+  color: grey;
+  float: right;
+  margin: 0 auto;
 }
 #addteacherPos {
-    width: 60px;
-    height: 70px;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    float: right;
-    text-align: right;
-    position: relative;
-    top: 12px;
-    right: 15px;
+  width: 60px;
+  height: 70px;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  float: right;
+  text-align: right;
+  position: relative;
+  top: 12px;
+  right: 15px;
 }
 #addTeacherContainer {
-    width: 420px;
-    height: auto;
-    margin: 30px auto;
-    overflow: hidden;
-    margin-bottom: 0;
+  width: 420px;
+  height: auto;
+  margin: 30px auto;
+  overflow: hidden;
+  margin-bottom: 0;
 }
-#addTeacherContainer form {} .addTeacherButton {
-    width: 250px;
-    height: 50px;
-    padding: 13px 0;
-    margin: 30px auto;
-    background-color: black;
-    color: white;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 0;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    /* For Safari 3.1 to 6.0 */
-    
-    cursor: pointer;
-    display: block;
-    outline: none;
-    border: none;
+#addTeacherContainer form {}
+.addTeacherButton {
+  width: 250px;
+  height: 50px;
+  padding: 13px 0;
+  margin: 30px auto;
+  background-color: black;
+  color: white;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  /* For Safari 3.1 to 6.0 */
+  cursor: pointer;
+  display: block;
+  outline: none;
+  border: none;
 }
 .addTeacherButton:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 #dislikesBarBig {
-    width: 500px;
-    height: 2px;
-    margin: 0 auto;
-    background-color: red;
+  width: 500px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: red;
 }
 #likesBarBig {
-    height: 2px;
-    background-color: green;
-    transition: width 1s;
-    -webkit-transition: width 1s;
-    /* For Safari 3.1 to 6.0 */
+  height: 2px;
+  background-color: green;
+  transition: width 1s;
+  -webkit-transition: width 1s;
+  /* For Safari 3.1 to 6.0 */
 }
 .dislikesBarSmall {
-    width: 329px;
-    height: 2px;
-    margin: 0 auto;
-    background-color: red;
+  width: 329px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: red;
 }
 .likesBarSmall {
-    height: 2px;
-    background-color: green;
-    transition: width 1s;
-    -webkit-transition: width 1s;
-    /* For Safari 3.1 to 6.0 */
+  height: 2px;
+  background-color: green;
+  transition: width 1s;
+  -webkit-transition: width 1s;
+  /* For Safari 3.1 to 6.0 */
 }
 #opinionContainer {
-    width: 650px;
-    height: auto;
-    margin: 20px auto;
+  width: 650px;
+  height: auto;
+  margin: 20px auto;
 }
 #addOpinionContainer {
-    width: 550px;
-    height: auto;
-    margin: 30px auto;
-    overflow: hidden;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 20px;
-    color: white;
-    position: relative;
+  width: 550px;
+  height: auto;
+  margin: 30px auto;
+  overflow: hidden;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 20px;
+  color: white;
+  position: relative;
 }
 #positiveOpinion {
-    width: 234px;
-    height: 25px;
-    background-color: green;
-    float: left;
-    border-radius: 5px;
-    padding: 13px;
-    text-align: right;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    /* For Safari 3.1 to 6.0 */
-    
-    cursor: pointer;
+  width: 234px;
+  height: 25px;
+  background-color: green;
+  float: left;
+  border-radius: 5px;
+  padding: 13px;
+  text-align: right;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  /* For Safari 3.1 to 6.0 */
+  cursor: pointer;
 }
 #negativeOpinion {
-    width: 234px;
-    height: 25px;
-    background-color: red;
-    float: left;
-    border-radius: 5px;
-    padding: 13px;
-    margin-left: 30px;
-    text-align: right;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    /* For Safari 3.1 to 6.0 */
-    
-    cursor: pointer;
+  width: 234px;
+  height: 25px;
+  background-color: red;
+  float: left;
+  border-radius: 5px;
+  padding: 13px;
+  margin-left: 30px;
+  text-align: right;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  /* For Safari 3.1 to 6.0 */
+  cursor: pointer;
 }
 #positiveOpinion:hover {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 #negativeOpinion:hover {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 #likeIcon {
-    display: inline-block;
-    background: url(sprites.png) no-repeat;
-    background-position: -20px -399px;
-    width: 32px;
-    height: 31px;
-    position: relative;
-    right: 50px;
-    bottom: 2px;
+  display: inline-block;
+  background: url(sprites.png) no-repeat;
+  background-position: -20px -399px;
+  width: 32px;
+  height: 31px;
+  position: relative;
+  right: 50px;
+  bottom: 2px;
 }
 #dislikeIcon {
-    display: inline-block;
-    background: url(sprites.png) no-repeat;
-    background-position: -123px -397px;
-    width: 32px;
-    height: 31px;
-    position: relative;
-    right: 50px;
-    bottom: 2px;
+  display: inline-block;
+  background: url(sprites.png) no-repeat;
+  background-position: -123px -397px;
+  width: 32px;
+  height: 31px;
+  position: relative;
+  right: 50px;
+  bottom: 2px;
 }
 #positiveOpinionText, #negativeOpinionText {
-    position: relative;
-    bottom: 11px;
+  position: relative;
+  bottom: 11px;
 }
 #dislikeCount, #likeCount {
-    position: relative;
-    bottom: 10px;
-    right: 42px;
+  position: relative;
+  bottom: 10px;
+  right: 42px;
 }
 #opinionsContainer {
-    width: 960px;
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
 }
 #positiveOpinions {
-    width: 460px;
-    color: green;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    float: left;
+  width: 460px;
+  color: green;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
 }
 #positiveOpinions p {
-    margin: 30px 0;
-    text-align: center;
-    line-height: 1.4;
+  margin: 30px 0;
+  text-align: center;
+  line-height: 1.4;
 }
 #positiveOpinions p:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 #negativeOpinions {
-    width: 460px;
-    color: red;
-    font-family: 'JF Regular', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    float: right;
+  width: 460px;
+  color: red;
+  font-family: 'JF Regular', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
 }
 #negativeOpinions p {
-    margin: 30px 0;
-    text-align: center;
+  margin: 30px 0;
+  text-align: center;
 }
 #negativeOpinions p:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 .gradeL {
-    margin: 0 auto;
-    margin-top: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 .grade {
-    float: right;
+  float: right;
 }
 .teacherCardLeft a {
-    transition: color 0.5s;
-    -webkit-transition: color 0.5s;
-    /* For Safari 3.1 to 6.0 */
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  /* For Safari 3.1 to 6.0 */
 }
 .teacherCardLeft a:hover {
-    color: grey;
+  color: grey;
 }
 .disabledButtons {
-    opacity: 0.3;
-    cursor: default !important;
+  opacity: 0.3;
+  cursor: default !important;
 }
 .item {
-    background-color: black !important;
-    border-radius: 5px !important;
-    border: none !important;
-    background-image: none !important;
-    font-size: 20px !important;
-    height: 22px !important;
-    padding-top: 7px !important;
+  background-color: black !important;
+  border-radius: 5px !important;
+  border: none !important;
+  background-image: none !important;
+  font-size: 20px !important;
+  height: 22px !important;
+  padding-top: 7px !important;
 }
 .selectize-input {
-    text-align: center !important;
-    border: none !important;
-    box-shadow: none !important;
-    height: 50px !important;
+  text-align: center !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 50px !important;
 }
 .selectize-input input {
-    font-size: 30px !important;
-    line-height: 38px !important;
-    text-align: center !important;
+  font-size: 30px !important;
+  line-height: 38px !important;
+  text-align: center !important;
 }
 .selectize-dropdown {
-    text-align: center !important;
-    background-color: grey !important;
-    font-size: 20px !important;
-    box-shadow: none !important;
-    border: none;
+  text-align: center !important;
+  background-color: grey !important;
+  font-size: 20px !important;
+  box-shadow: none !important;
+  border: none;
 }
 .selectize-dropdown [data-selectable] {
-    background: #fff;
+  background: #fff;
 }
 .courseItem {
-    background-color: black;
-    border-radius: 5px;
-    border: none;
-    font-size: 20px;
-    height: 22px;
-    padding-top: 7px;
-    color: white;
-    display: inline-block;
-    margin-top: 20px;
-    padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  height: 22px;
+  padding-top: 7px;
+  color: white;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px;
 }
 .positiveModal {
-    color: black;
-    background: white;
-    border: 1px solid green;
+  color: black;
+  background: white;
+  border: 1px solid green;
 }
 .positiveModal h3 {
-    background-color: green;
-    color: white;
+  background-color: green;
+  color: white;
 }
 #opinion {
-    width: 100%;
-    border: none;
-    text-align: right;
-    resize: none;
-    outline: none;
-    height: 200px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  resize: none;
+  outline: none;
+  height: 200px;
 }
 .positiveModal div button {
-    width: 120px;
-    height: 55px;
-    padding: 13px 0;
-    font-size: 20px;
-    border: none;
-    background-color: green;
-    border-radius: 5px;
-    color: white;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
+  width: 120px;
+  height: 55px;
+  padding: 13px 0;
+  font-size: 20px;
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 .positiveModal div button:hover {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 .negativeModal {
-    color: black;
-    background: white;
-    border: 1px solid red;
+  color: black;
+  background: white;
+  border: 1px solid red;
 }
 .negativeModal h3 {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
 }
 .negativeModal div button {
-    width: 120px;
-    height: 55px;
-    padding: 13px 0;
-    font-size: 20px;
-    border: none;
-    background-color: red;
-    border-radius: 5px;
-    color: white;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
+  width: 120px;
+  height: 55px;
+  padding: 13px 0;
+  font-size: 20px;
+  border: none;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 .negativeModal div button:hover {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 #opinionQuestion {
-    margin: 50px;
-    font-family: 'JF Light', sans-serif;
+  margin: 50px;
+  font-family: 'JF Light', sans-serif;
 }
 #closeButton {
-    display: none;
+  display: none;
 }
 #disablingDiv {
-    position: absolute;
-    height: 51px;
-    width: 550px;
+  position: absolute;
+  height: 51px;
+  width: 550px;
 }
 #searchIcon {
-    position: relative;
-    top: 6px;
-    right: 10px;
+  position: relative;
+  top: 6px;
+  right: 10px;
 }
 #fullNameContainer {
-    overflow: hidden;
-    border: solid 1px black;
-    border-radius: 5px;
+  overflow: hidden;
+  border: solid 1px black;
+  border-radius: 5px;
 }
 .teacherListItem {
-    text-align: left;
-    margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 #positiveOpinions .divider, #negativeOpinions .divider {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 footer {
-    color: white;
-    background-color: red;
-    padding: 10px;
-    text-align: center;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  text-align: center;
 }
 header {
-    color: white;
-    background-color: green;
-    padding: 10px;
-    text-align: center;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
+  color: white;
+  background-color: green;
+  padding: 10px;
+  text-align: center;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 #longDivider {
-    width: 1000px;
-    height: 2px;
-    background-color: black;
-    margin: 30px auto;
+  width: 1000px;
+  height: 2px;
+  background-color: black;
+  margin: 30px auto;
 }
 #statsHeader {
-    background-color: white;
-    display: inline-block;
-    width: 450px;
-    position: relative;
-    top: 60px;
-    font-size: 40px;
+  background-color: white;
+  display: inline-block;
+  width: 450px;
+  position: relative;
+  top: 60px;
+  font-size: 40px;
 }
 #statsContainer {
-    width: 1080px;
-    height: 150px;
-    margin: 50px auto;
-    overflow: hidden;
+  width: 1080px;
+  height: 150px;
+  margin: 50px auto;
+  overflow: hidden;
 }
 .singleStat {
-    width: 250px;
-    height: 135px;
-    margin: 0 10px;
-    background-color: black;
-    border-radius: 5px;
-    float: left;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    padding-top: 15px;
+  width: 250px;
+  height: 135px;
+  margin: 0 10px;
+  background-color: black;
+  border-radius: 5px;
+  float: left;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 15px;
 }
 .statsRed {
-    background-color: red;
+  background-color: red;
 }
 .statsGreen {
-    background-color: green;
+  background-color: green;
 }
 #searchTitle {
-    font-size: 40px;
+  font-size: 40px;
 }
 #notSearchingText {
-    font-size: 40px;
-    margin: 50px;
-    color: grey;
+  font-size: 40px;
+  margin: 50px;
+  color: grey;
 }
 #notFoundText {
-    font-size: 40px;
-    color: red;
+  font-size: 40px;
+  color: red;
 }
 #linkToHome {
-    display: inline-block;
+  display: inline-block;
 }
 #notFoundPageText {
-    font-size: 40px;
-    color: black;
+  font-size: 40px;
+  color: black;
 }
 #longDividerChat {
-    width: 1000px;
-    height: 2px;
-    background-color: black;
-    margin: 30px auto;
+  width: 1000px;
+  height: 2px;
+  background-color: black;
+  margin: 30px auto;
 }
 #chatHeader {
-    background-color: white;
-    display: inline-block;
-    width: 520px;
-    position: relative;
-    top: 60px;
-    font-size: 40px;
+  background-color: white;
+  display: inline-block;
+  width: 520px;
+  position: relative;
+  top: 60px;
+  font-size: 40px;
 }
 #tlkio {
-    margin: 0 auto;
-    margin-top: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 #header .header-bar {
-    background-color: black!important;
+  background-color: black!important;
 }
 .info {
-    display: none !important;
+  display: none !important;
 }
 #chatContainer {
-    position: relative;
-    width: 800px;
-    margin: auto;
+  position: relative;
+  width: 800px;
+  margin: auto;
 }
 #shareButton {
-    width: 280px;
-    height: 50px;
-    background-color: #000080;
-    border-radius: 5px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
+  width: 280px;
+  height: 50px;
+  background-color: #000080;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 #shareButton:hover {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 #facebookIcon {
-    position: relative;
-    top: 9px;
-    right: 115px;
+  position: relative;
+  top: 9px;
+  right: 115px;
 }
 #shareText {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: right;
-    position: relative;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  position: relative;
 }
 #shareTextContent {
-    position: relative;
-    bottom: 22px;
-    right: 15px;
+  position: relative;
+  bottom: 22px;
+  right: 15px;
 }
 #shareTextNumber {
-    position: relative;
-    bottom: 20px;
-    right: 46px;
+  position: relative;
+  bottom: 20px;
+  right: 46px;
 }
 @media all and (max-width: 1100px) {
-    #statsContainer {
-        width: 600px;
-        margin: 10px auto;
-    }
-    .singleStat {
-        width: 130px;
-        height: 95px;
-        font-size: 25px;
-        padding-top: 37px;
-    }
-    #longDivider {
-        width: 560px;
-    }
-    #statsHeader {
-        width: 330px;
-        top: 56px;
-        font-size: 30px;
-    }
-    #searchContainer {
-        width: 600px;
-        margin-bottom: 30px;
-    }
-    #search {
-        width: 530px;
-    }
-    #teacherCardContainer {
-        width: 600px;
-    }
-    .teacherCard {
-        float: none;
-        margin: 30px auto;
-    }
-    #teacherCardContainer .teacherCard:nth-child(even) {
-        margin-left: 0px;
-        float: none;
-        margin: 30px auto;
-    }
-    h1#headline {
-        font-size: 40px;
-        margin: 40px auto;
-        width: 600px;
-    }
-    h3#subheadline {
-        font-size: 20px;
-        width: 600px;
-        margin: auto;
-    }
-    #searchTitle {
-        font-size: 30px;
-    }
-    #notFoundText {
-        font-size: 30px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-    header, footer {
-        font-size: 15px;
-    }
-    .divider {
-        margin: 40px auto;
-    }
-    #opinionsContainer {
-        width: 600px;
-    }
-    #positiveOpinions, #negativeOpinions {
-        width: 300px;
-    }
-    h1 {
-        font-size: 50px;
-    }
-    #shareButton {
-        display: none;
-    }
+  #statsContainer {
+    width: 600px;
+    margin: 10px auto;
+  }
+  .singleStat {
+    width: 130px;
+    height: 95px;
+    font-size: 25px;
+    padding-top: 37px;
+  }
+  #longDivider {
+    width: 560px;
+  }
+  #statsHeader {
+    width: 330px;
+    top: 56px;
+    font-size: 30px;
+  }
+  #searchContainer {
+    width: 600px;
+    margin-bottom: 30px;
+  }
+  #search {
+    width: 530px;
+  }
+  #teacherCardContainer {
+    width: 600px;
+  }
+  .teacherCard {
+    float: none;
+    margin: 30px auto;
+  }
+  #teacherCardContainer .teacherCard:nth-child(even) {
+    margin-left: 0px;
+    float: none;
+    margin: 30px auto;
+  }
+  h1#headline {
+    font-size: 40px;
+    margin: 40px auto;
+    width: 600px;
+  }
+  h3#subheadline {
+    font-size: 20px;
+    width: 600px;
+    margin: auto;
+  }
+  #searchTitle {
+    font-size: 30px;
+  }
+  #notFoundText {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  header, footer {
+    font-size: 15px;
+  }
+  .divider {
+    margin: 40px auto;
+  }
+  #opinionsContainer {
+    width: 600px;
+  }
+  #positiveOpinions, #negativeOpinions {
+    width: 300px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  #shareButton {
+    display: none;
+  }
 }
 @media all and (max-width: 649px) {
-    #statsContainer {
-        width: 300px;
-        height: 300px;
-        margin: 10px auto;
-    }
-    .singleStat {
-        width: 130px;
-        height: 95px;
-        margin-top: 10px;
-        font-size: 25px;
-        padding-top: 37px;
-    }
-    #longDivider {
-        width: 280px;
-    }
-    #statsHeader {
-        width: 220px;
-        top: 51px;
-        font-size: 20px;
-    }
-    #searchContainer {
-        width: 300px;
-        margin-bottom: 0px;
-    }
-    #search {
-        width: 250px;
-        font-size: 20px;
-    }
-    #searchIcon {
-        top: 13px;
-    }
-    h1#headline {
-        font-size: 20px;
-        margin: 40px auto;
-        width: 300px;
-    }
-    h3#subheadline {
-        width: 300px;
-        margin: auto;
-    }
-    #searchTitle {
-        font-size: 20px;
-    }
-    #teacherCardContainer {
-        width: 300px;
-    }
-    #notSearchingText {
-        font-size: 15px;
-    }
-    #notFoundText {
-        font-size: 20px;
-    }
-    #addTeacherContainer {
-        width: 300px;
-    }
-    #addteacherTextField {
-        width: 230px;
-        font-size: 30px;
-    }
-    #addteacherPos {
-        width: 50px;
-        top: 18px;
-        font-size: 30px;
-    }
-    #shareButton {
-        display: none;
-    }
-
-    .teacherCard {
-        width: 270px;
-    }
-
-    .teacherCardLeft {
-        width: 190px;
-    }
-
-    .teacherCardName {
-        width: 220px;
-        font-size: 25px;
-        position: relative;
-        top: 15px;
-        right: 13px;
-    }
-
-    .dislikesBarSmall {
-        width: 210px;
-    }
-
-    h1{
-        font-size: 30px;
-    }
-
-    #dislikesBarBig{
-        width: 300px;
-    }
-
-    #opinionQuestion {
-        font-size: 20px;
-        margin: 30px;
-    }
-
-    #addOpinionContainer{
-        width: 260px;
-    }
-
-    #negativeOpinion {
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-
-    #opinionsContainer {
-        width: 300px;
-    }
-
-    #negativeOpinions {
-        margin-top: 30px;
-    }
-
+  #statsContainer {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+  }
+  .singleStat {
+    width: 130px;
+    height: 95px;
+    margin-top: 10px;
+    font-size: 25px;
+    padding-top: 37px;
+  }
+  #longDivider {
+    width: 280px;
+  }
+  #statsHeader {
+    width: 220px;
+    top: 51px;
+    font-size: 20px;
+  }
+  #searchContainer {
+    width: 300px;
+    margin-bottom: 0px;
+  }
+  #search {
+    width: 250px;
+    font-size: 20px;
+  }
+  #searchIcon {
+    top: 13px;
+  }
+  h1#headline {
+    font-size: 20px;
+    margin: 40px auto;
+    width: 300px;
+  }
+  h3#subheadline {
+    width: 300px;
+    margin: auto;
+  }
+  #searchTitle {
+    font-size: 20px;
+  }
+  #teacherCardContainer {
+    width: 300px;
+  }
+  #notSearchingText {
+    font-size: 15px;
+  }
+  #notFoundText {
+    font-size: 20px;
+  }
+  #addTeacherContainer {
+    width: 300px;
+  }
+  #addteacherTextField {
+    width: 230px;
+    font-size: 30px;
+  }
+  #addteacherPos {
+    width: 50px;
+    top: 18px;
+    font-size: 30px;
+  }
+  #shareButton {
+    display: none;
+  }
+  .teacherCard {
+    width: 270px;
+  }
+  .teacherCardLeft {
+    width: 190px;
+  }
+  .teacherCardName {
+    width: 220px;
+    font-size: 25px;
+    position: relative;
+    top: 15px;
+    right: 13px;
+  }
+  .dislikesBarSmall {
+    width: 210px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  #dislikesBarBig {
+    width: 300px;
+  }
+  #opinionQuestion {
+    font-size: 20px;
+    margin: 30px;
+  }
+  #addOpinionContainer {
+    width: 260px;
+  }
+  #negativeOpinion {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  #opinionsContainer {
+    width: 300px;
+  }
+  #negativeOpinions {
+    margin-top: 30px;
+  }
 }
-
 #opinionsAdminContainer {
-    overflow: hidden;
-    width: 1200px;
-    margin: 0 auto;
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
 }
-
 #opinionsAdminPositiveContainer {
-    float: left;
-    width: 600px;
-    background-color: lightgreen;
+  float: left;
+  width: 600px;
+  background-color: lightgreen;
 }
-
 #opinionsAdminNegativeContainer {
-    float: right;
-    width: 600px;
-    background-color: lightpink;
+  float: right;
+  width: 600px;
+  background-color: lightpink;
 }
-
 .OpinionListItem {
-    margin-bottom: 20px;
-    text-align: left;
-    border-bottom: 2px solid black;
+  margin-bottom: 20px;
+  text-align: left;
+  border-bottom: 2px solid black;
 }
-
-.commandsBar a{
-    color: red;
-    text-decoration: underline;
+.commandsBar a {
+  color: red;
+  text-decoration: underline;
 }
-
 .commandsBar {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-
 .infoBar {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-
 .isOffensive {
-    opacity: 0.3;
+  opacity: 0.3;
 }
-
 .singleOpinionTextarea {
-    width: 590px;
+  width: 590px;
 }

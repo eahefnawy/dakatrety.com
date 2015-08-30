@@ -2,68 +2,67 @@ Teachers = new Mongo.Collection("teachers");
 Opinions = new Mongo.Collection("opinions");
 Info = new Mongo.Collection("info");
 
-if(Meteor.isServer){
+if (Meteor.isServer) {
+  Meteor.publish("home", function() {
+    return [Teachers.find(), Info.find()];
+  });
 
-Meteor.publish("home", function () {
-  return [Teachers.find(), Info.find()];
-});
+  Meteor.publish("teacher", function(teacherId) {
+    return [Teachers.find(teacherId), Opinions.find({
+      teacherId: teacherId
+    }), Info.find()];
+  });
 
-Meteor.publish("teacher", function (teacherId) {
-  return [Teachers.find(teacherId), Opinions.find({teacherId: teacherId}), Info.find()];
-});
+  Meteor.publish("IAmAdminSoFuckOffTeachers", function() {
+    return Teachers.find();
+  });
 
-Meteor.publish("IAmAdminSoFuckOffTeachers", function(){
-  return Teachers.find();
+  Meteor.publish("IAmAdminSoFuckOffOpinions", function() {
+    return [Opinions.find(), Teachers.find()];
+  });
 
-
-})
-
-Meteor.publish("IAmAdminSoFuckOffOpinions", function(){
-  return [Opinions.find(), Teachers.find()];
-
-
-})
-
-
-  if(!Meteor.users.findOne({username: 'admin'})){
-
-    Accounts.createUser({username: 'admin', password: 'E60Q}jxg3yW8lmr'})
-    console.log('created admin')
-  }
-
-  Meteor.startup(function () {
+  Meteor.startup(function() {
     if (Info.find().count() === 0) {
       Info.insert({
         name: "Info",
-        totalDrs: Teachers.find({postition: "د. "}).count(),
-        totalEngs: Teachers.find({postition: "م. "}).count(),
-        totalPositiveOpinions: Opinions.find({polarity: 'positive'}).count(),
-        totalNegativeOpinions: Opinions.find({polarity: 'negative'}).count()
+        totalDrs: Teachers.find({
+          postition: "د. "
+        }).count(),
+        totalEngs: Teachers.find({
+          postition: "م. "
+        }).count(),
+        totalPositiveOpinions: Opinions.find({
+          polarity: 'positive'
+        }).count(),
+        totalNegativeOpinions: Opinions.find({
+          polarity: 'negative'
+        }).count()
       });
     }
   });
-Teachers.allow({
-  insert: function (userId, doc) {
-    return true;
-  },
-  update: function (userId, doc, fields, modifier) {
-    return false;
-  },
-  remove: function (userId, doc) {
-    return false;
-  }
-});
+  
+  Teachers.allow({
+    insert: function(userId, doc) {
+      return true;
+    },
+    update: function(userId, doc, fields, modifier) {
+      return false;
+    },
+    remove: function(userId, doc) {
+      return false;
+    }
+  });
 
-Opinions.allow({
-  insert: function (userId, doc) {
-    return true;
-  },
-  update: function (userId, doc, fields, modifier) {
-    return false;
-  },
-  remove: function (userId, doc) {
-    return false;
-  }
-});
+  Opinions.allow({
+    insert: function(userId, doc) {
+      return true;
+    },
+    update: function(userId, doc, fields, modifier) {
+      return false;
+    },
+    remove: function(userId, doc) {
+      return false;
+    }
+  });
 
 }

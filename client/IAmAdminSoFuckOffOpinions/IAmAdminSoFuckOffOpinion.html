@@ -2,10 +2,6 @@
 
     {{#if admin}}
 
-
-
-
-
     <div id="opinionsAdminContainer">
         <div id="opinionsAdminPositiveContainer">
             {{#each positiveOpinion}} {{>singleOpinion}} {{/each}}
@@ -17,13 +13,9 @@
     {{else}}
     <h1>ايه يا بابا, هيه وكالة من غير بواب ولا ايه</h1> {{/if}}
 
-
 </template>
 
 <template name="singleOpinion">
-
-
-
     <div class="OpinionListItem">
         <div class="commandsBar">
             <a class="removeOpinion" href="#">remove</a> - <a class="changeOpinion" href="#">changeOpinion</a> - <a class="reverseOpinion" href="#">reversePolarity</a> - <a class="offensiveOpinion" href="#">offensive</a>
