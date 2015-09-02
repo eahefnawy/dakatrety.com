@@ -1,4 +1,4 @@
-Template.IAmAdminSoFuckOffTeachers.helpers({
+Template.filterTeachers.helpers({
 
   teacher: function() {
     return Teachers.find({}, {
@@ -18,7 +18,7 @@ Template.singleTeacher.events({
   'click .removeTeacher': function(e, t) {
     e.preventDefault();
     e.stopPropagation();
-    Meteor.call('IAmAdminSoFuckOffTeachersRemove', this._id, function(error, result) {
+    Meteor.call('filterTeachersRemove', this._id, function(error, result) {
       if (error) {
         console.log('remove teacher error admin')
       } else {

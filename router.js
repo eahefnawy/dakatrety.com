@@ -43,10 +43,9 @@ Router.map(function() {
     }
   });
 
-  // haha I was pissed cause some students and TAs were trying to hack the server!
-  this.route('IAmAdminSoFuckOffTeachers', {
-    path: '/IAmAdminSoFuckOff/teachers',
-    template: 'IAmAdminSoFuckOffTeachers',
+  this.route('filterTeachers', {
+    path: '/filter/teachers',
+    template: 'filterTeachers',
     notFoundTemplate: 'notFound',
     loadingTemplate: 'spinner',
     data: function() {
@@ -59,13 +58,13 @@ Router.map(function() {
       }
     },
     waitOn: function() {
-      return Meteor.subscribe('IAmAdminSoFuckOffTeachers');
+      return Meteor.subscribe('filterTeachers');
     }
   });
 
-  this.route('IAmAdminSoFuckOffOpinions', {
-    path: '/IAmAdminSoFuckOff/opinions',
-    template: 'IAmAdminSoFuckOffOpinions',
+  this.route('filterOpinions', {
+    path: '/filter/opinions',
+    template: 'filterOpinions',
     notFoundTemplate: 'notFound',
     loadingTemplate: 'spinner',
     data: function() {
@@ -78,7 +77,7 @@ Router.map(function() {
       }
     },
     waitOn: function() {
-      return Meteor.subscribe('IAmAdminSoFuckOffOpinions');
+      return Meteor.subscribe('filterOpinions');
     }
   });
 });

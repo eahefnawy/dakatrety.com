@@ -13,11 +13,11 @@ if (Meteor.isServer) {
     }), Info.find()];
   });
 
-  Meteor.publish("IAmAdminSoFuckOffTeachers", function() {
+  Meteor.publish("filterTeachers", function() {
     return Teachers.find();
   });
 
-  Meteor.publish("IAmAdminSoFuckOffOpinions", function() {
+  Meteor.publish("filterOpinions", function() {
     return [Opinions.find(), Teachers.find()];
   });
 

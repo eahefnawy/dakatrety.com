@@ -1,4 +1,4 @@
-Template.IAmAdminSoFuckOffOpinions.helpers({
+Template.filterOpinions.helpers({
 
   positiveOpinion: function() {
     return Opinions.find({
@@ -31,7 +31,7 @@ Template.singleOpinion.events({
 
     e.preventDefault();
     e.stopPropagation();
-    Meteor.call('IAmAdminSoFuckOffOpinionsRemove', this._id, function(error, result) {
+    Meteor.call('filterOpinionsRemove', this._id, function(error, result) {
       if (error) {
         console.log('remove opinion error admin')
       } else {
@@ -94,7 +94,7 @@ Template.singleOpinion.events({
   }
 
 })
-Template.IAmAdminSoFuckOffOpinions.rendered = function() {
+Template.filterOpinions.rendered = function() {
 
   $('.singleOpinionTextarea').autosize();
 }

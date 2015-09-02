@@ -18,8 +18,8 @@ Meteor.methods({
       updateInfo()
       return newTeacher
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
 
@@ -48,12 +48,12 @@ Meteor.methods({
       updateGrade(teacherId)
       return theOpinion;
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
 
-  IAmAdminSoFuckOffTeachersRemove: function(teacherId) {
+  filterTeachersRemove: function(teacherId) {
     if (Meteor.user().username == 'admin') {
       Teachers.remove(teacherId);
       Opinions.remove({
@@ -61,12 +61,12 @@ Meteor.methods({
       })
       updateInfo()
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
 
-  IAmAdminSoFuckOffOpinionsRemove: function(opinionId) {
+  filterOpinionsRemove: function(opinionId) {
     if (Meteor.user().username == 'admin') {
       if (Opinions.findOne(opinionId).polarity == 'negative') {
 
@@ -86,8 +86,8 @@ Meteor.methods({
       updateGrade(Opinions.findOne(opinionId).teacherId)
       Opinions.remove(opinionId);
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
 
@@ -100,8 +100,8 @@ Meteor.methods({
         }
       });
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
   changeOpinion: function(opinionId, newOpinion) {
@@ -112,8 +112,8 @@ Meteor.methods({
         }
       });
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
   reverseOpinion: function(opinionId, newPolarity, teacherId) {
@@ -142,8 +142,8 @@ Meteor.methods({
       updateGrade(teacherId)
       updateInfo()
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   },
 
@@ -156,8 +156,8 @@ Meteor.methods({
         }
       });
     } else {
-      throw new Meteor.Error("FuckOff",
-        "Seems that you're trying to hack the site, so fuck off!");
+      throw new Meteor.Error("GoodLuck",
+        "Seems that you're trying to hack the site! Good Luck!");
     }
   }
 });
