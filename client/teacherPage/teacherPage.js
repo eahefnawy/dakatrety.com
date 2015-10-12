@@ -14,6 +14,7 @@ Template.teacherPage.helpers({
       }
     });
   },
+
   negativeOpinions: function() {
     return Opinions.find({
       $and: [{
@@ -27,98 +28,112 @@ Template.teacherPage.helpers({
       }
     });
   },
+
   noLikes: function() {
     return (this.negativeOpinions === 0) ? 'grey' : false;
   },
+
   positiveOpinionsString: function() {
-    return this.positiveOpinions.toString()
+    return this.positiveOpinions.toString();
   },
+
   negativeOpinionsString: function() {
-    return this.negativeOpinions.toString()
+    return this.negativeOpinions.toString();
   },
+
   isDisabled: function() {
     return (myOpinions.findOne({
       teacherId: this._id
     })) ? 'disabled' : null;
   },
+
   isDisabledClass: function() {
     return (myOpinions.findOne({
       teacherId: this._id
     })) ? 'disabledButtons' : false;
   },
+
   isDisabledCourses: function() {
     return (myOpinions.findOne({
       teacherId: this._id
     })) ? 'none' : 'block';
   },
+
   disablingDiv: function() {
     return (myOpinions.findOne({
       teacherId: this._id
     })) ? 'disablingDiv' : null;
   },
+
   placeholder: function() {
-    var onTrue = '.شكرا! رأيك وصلنا'
-    var onFalse = 'ايه رأيك فى ' + this.fullName + '؟'
+    var onTrue = '.شكرا! رأيك وصلنا';
+    var onFalse = 'ايه رأيك فى ' + this.fullName + '؟';
     return (myOpinions.findOne({
       teacherId: this._id
     })) ? onTrue : onFalse;
   },
+
   courses: function() {
-    var coursesObjs = []
+    var coursesObjs = [];
     $.each(this.courses, function(index, value) {
 
       var obj = {
         name: value
-      }
-      coursesObjs.push(obj)
-    })
+      };
+      coursesObjs.push(obj);
+    });
+
     return coursesObjs;
   },
+
   modalClass: function() {
-    return Session.get('modalClass')
+    return Session.get('modalClass');
   },
+
   modalTitle: function() {
-    return Session.get('modalTitle')
+    return Session.get('modalTitle');
   }
 });
+
 Template.teacherPage.events({
   'click #positiveOpinion': function(e, t) {
-    Session.set('polarity', 'positive')
-    Session.set('modalClass', 'positiveModal')
-    Session.set('modalTitle', 'رأى اجابى')
+    Session.set('polarity', 'positive');
+    Session.set('modalClass', 'positiveModal');
+    Session.set('modalTitle', 'رأى اجابى');
     $('#opinion').focus();
 
-
   },
+
   'click #negativeOpinion': function(e, t) {
-    Session.set('polarity', 'negative')
-    Session.set('modalClass', 'negativeModal')
-    Session.set('modalTitle', 'رأى سلبى')
+    Session.set('polarity', 'negative');
+    Session.set('modalClass', 'negativeModal');
+    Session.set('modalTitle', 'رأى سلبى');
     $('#opinion').focus();
   },
+
   'click #submitOpinion': function(e, t) {
     $('#closeButton').click();
-    if (($('#opinion').val() != "") && (myOpinions.findOne({
+    if (($('#opinion').val() != '') && (myOpinions.findOne({
         teacherId: this._id
       }) === undefined) && (Session.get('clickedOpinion') === false)) {
-      e.preventDefault()
-      e.stopPropagation()
+      e.preventDefault();
+      e.stopPropagation();
       var teacherId = this._id;
-      Session.set('clickedOpinion', true)
+      Session.set('clickedOpinion', true);
       Meteor.call('insertOpinion', $('#opinion').val(), this._id, Session.get('polarity'), function(error, result) {
         if (error) {
-          console.log('insert opinion error')
+          console.log('insert opinion error');
         } else {
           myOpinions.insert({
             teacherId: teacherId,
             opinionId: result
-          })
+          });
           $('#opinion').val('');
           $('#closeButton').click();
         }
       });
     } else {
-      console.log('empty')
+      console.log('empty');
     }
   }
 });
@@ -128,7 +143,6 @@ Template.teacherPage.rendered = function() {
     placeholder: true
   });
 
-
   $('#courses').selectize({
     delimiter: ',',
     persist: false,
@@ -136,14 +150,13 @@ Template.teacherPage.rendered = function() {
       return {
         value: input,
         text: input
-      }
+      };
     },
 
     onChange: function(value) {
-      courses = value.split(",");
+      courses = value.split(',');
     }
   });
-
 
   $('.post-tags').selectize({
     delimiter: ',',
@@ -152,11 +165,11 @@ Template.teacherPage.rendered = function() {
       return {
         value: input,
         text: input
-      }
+      };
     },
 
     onChange: function(value) {
-      activityObj.tags = value.split(",");
+      activityObj.tags = value.split(',');
     }
   });
   classieGlobal();
@@ -164,17 +177,17 @@ Template.teacherPage.rendered = function() {
   if (myOpinions.findOne({
       teacherId: this._id
     })) {
-    $('#positiveOpinion').off()
-    $('#negatveiOpinion').off()
+    $('#positiveOpinion').off();
+    $('#negatveiOpinion').off();
   }
-}
+};
 
 Template.oneOpinion.helpers({
   isOffensive: function() {
     if (this.isOffensive) {
-      return "isOffensive"
+      return 'isOffensive';
     } else {
-      return false
+      return false;
     }
   }
-})
+});

@@ -15,11 +15,11 @@ Meteor.methods({
         courses: [],
         epoch: new Date().getTime()
       });
-      updateInfo()
-      return newTeacher
+      updateInfo();
+      return newTeacher;
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
 
@@ -44,12 +44,12 @@ Meteor.methods({
           }
         });
       }
-      updateInfo()
-      updateGrade(teacherId)
+      updateInfo();
+      updateGrade(teacherId);
       return theOpinion;
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
 
@@ -59,10 +59,10 @@ Meteor.methods({
       Opinions.remove({
         teacherId: teacherId
       })
-      updateInfo()
+      updateInfo();
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
 
@@ -82,12 +82,12 @@ Meteor.methods({
           }
         });
       }
-      updateInfo()
-      updateGrade(Opinions.findOne(opinionId).teacherId)
+      updateInfo();
+      updateGrade(Opinions.findOne(opinionId).teacherId);
       Opinions.remove(opinionId);
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
 
@@ -100,8 +100,8 @@ Meteor.methods({
         }
       });
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
   changeOpinion: function(opinionId, newOpinion) {
@@ -112,8 +112,8 @@ Meteor.methods({
         }
       });
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
   reverseOpinion: function(opinionId, newPolarity, teacherId) {
@@ -124,7 +124,7 @@ Meteor.methods({
         }
       });
 
-      if (newPolarity === "negative") {
+      if (newPolarity === 'negative') {
         Teachers.update(Opinions.findOne(opinionId).teacherId, {
           $inc: {
             negativeOpinions: 1,
@@ -139,11 +139,11 @@ Meteor.methods({
           }
         });
       }
-      updateGrade(teacherId)
-      updateInfo()
+      updateGrade(teacherId);
+      updateInfo();
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   },
 
@@ -156,8 +156,8 @@ Meteor.methods({
         }
       });
     } else {
-      throw new Meteor.Error("GoodLuck",
-        "Seems that you're trying to hack the site! Good Luck!");
+      throw new Meteor.Error('GoodLuck',
+        'Seems that you\'re trying to hack the site! Good Luck!');
     }
   }
 });

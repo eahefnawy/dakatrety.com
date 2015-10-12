@@ -1,6 +1,7 @@
 updateGrade = function(teacherId) {
-  var teacherObj = Teachers.findOne(teacherId)
+  var teacherObj = Teachers.findOne(teacherId);
   var totalOpinions = teacherObj.positiveOpinions + teacherObj.negativeOpinions;
+
   // so I wouldn't divide by 0 and get a NaN instead of 0
   if (totalOpinions === 0) {
     var opinionsPercent = 0;
@@ -25,7 +26,7 @@ updateGrade = function(teacherId) {
 
     if (totalOpinions === 0) return 'UL';
     if (opinionsPercent >= 0) return 'FL';
-  }
+  };
 
   var getGrade = function(opinionsPercent, totalOpinions) {
     if (opinionsPercent >= 95) return 'APlus';
@@ -44,7 +45,7 @@ updateGrade = function(teacherId) {
 
     if (totalOpinions === 0) return 'U';
     if (opinionsPercent >= 0) return 'F';
-  }
+  };
 
   Teachers.update(teacherObj._id, {
     $set: {
@@ -52,6 +53,6 @@ updateGrade = function(teacherId) {
       gradeL: getGradeL(opinionsPercent, totalOpinions),
       grade: getGrade(opinionsPercent, totalOpinions)
     }
-  })
+  });
 
-}
+};

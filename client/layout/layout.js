@@ -1,32 +1,32 @@
 if (!Session.get('position')) {
-    Session.set('position', 'د. ')
-    Session.set('positionHTML', '.د ') //arabic DOT doesn't render probably when there's space after it
-    Session.set('positionText', 'الدكتور')
+  Session.set('position', 'د. ');
+  Session.set('positionHTML', '.د '); //arabic DOT doesn't render probably when there's space after it
+  Session.set('positionText', 'الدكتور');
 }
 
 Template.layout.events({
-    'submit #submitTeacher': function(e, t) {
+  'submit #submitTeacher': function(e, t) {
 
-        e.preventDefault();
-        e.stopPropagation()
+      e.preventDefault();
+      e.stopPropagation();
 
-        if (($('#addteacherTextField').val() != "") && (Session.get('clickedSubmitTeacher') === false)) {
+      if (($('#addteacherTextField').val() != "") && (Session.get('clickedSubmitTeacher') === false)) {
 
-            Session.set('clickedSubmitTeacher', true)
-            Meteor.call('insertTeacher', Session.get('position'), $('#addteacherTextField').val(), function(error, result) {
-                if (error) {
-                    console.log('insert teacher error')
-                } else {
+          Session.set('clickedSubmitTeacher', true)
+          Meteor.call('insertTeacher', Session.get('position'), $('#addteacherTextField').val(), function(error, result) {
+              if (error) {
+                  console.log('insert teacher error')
+              } else {
 
-                    $('#addteacherTextField').val('');
-                    Router.go('teacherPage', {
-                        id: result
-                    });
-                }
-            });
-        } else {
-            console.log("empty")
-        }
+                  $('#addteacherTextField').val('');
+                  Router.go('teacherPage', {
+                      id: result
+                  });
+              }
+          });
+      } else {
+          console.log("empty")
+      }
     },
     'click .choosePos:nth-child(odd)': function(e, t) {
         Session.set('position', 'م. ')

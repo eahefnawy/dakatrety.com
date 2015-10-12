@@ -1,29 +1,31 @@
 Router.map(function() {
-  
+
   this.route('home', {
     path: '/',
-    layoutTemplate: "layout",
+    layoutTemplate: 'layout',
     template: 'home',
     notFoundTemplate: 'notFound',
     onBeforeAction: function() {
       if (Meteor.isClient) {
-        Session.set('clickedOpinion', false)
-        Session.set('clickedSubmitTeacher', false)
-        $('body,html').scrollTop(0)
-        Session.set('teachers', [])
-        Session.set('notSearching', true)
-        this.next()
+        Session.set('clickedOpinion', false);
+        Session.set('clickedSubmitTeacher', false);
+        $('body,html').scrollTop(0);
+        Session.set('teachers', []);
+        Session.set('notSearching', true);
+        this.next();
       }
     },
+
     waitOn: function() {
       return Meteor.subscribe('home');
     },
+
     loadingTemplate: 'spinner'
   });
 
   this.route('teacherPage', {
     path: '/teachers/:id',
-    layoutTemplate: "layout",
+    layoutTemplate: 'layout',
     template: 'teacherPage',
     notFoundTemplate: 'notFound',
     loadingTemplate: 'spinner',
@@ -32,12 +34,13 @@ Router.map(function() {
     },
     onBeforeAction: function() {
       if (Meteor.isClient) {
-        Session.set('clickedOpinion', false)
-        Session.set('clickedSubmitTeacher', false)
-        $('body,html').scrollTop(0)
-        this.next()
+        Session.set('clickedOpinion', false);
+        Session.set('clickedSubmitTeacher', false);
+        $('body,html').scrollTop(0);
+        this.next();
       }
     },
+
     waitOn: function() {
       return Meteor.subscribe('teacher', this.params.id);
     }
@@ -51,10 +54,11 @@ Router.map(function() {
     data: function() {
       return Teachers.find();
     },
+
     onBeforeAction: function() {
       if (Meteor.isClient) {
-        $('body,html').scrollTop(0)
-        this.next()
+        $('body,html').scrollTop(0);
+        this.next();
       }
     },
     waitOn: function() {
@@ -72,10 +76,11 @@ Router.map(function() {
     },
     onBeforeAction: function() {
       if (Meteor.isClient) {
-        $('body,html').scrollTop(0)
-        this.next()
+        $('body,html').scrollTop(0);
+        this.next();
       }
     },
+
     waitOn: function() {
       return Meteor.subscribe('filterOpinions');
     }
@@ -85,6 +90,7 @@ Router.map(function() {
 Router.configure({
   notFoundTemplate: 'notFound'
 });
+
 Router.plugin('dataNotFound', {
   notFoundTemplate: 'notFound'
 });
