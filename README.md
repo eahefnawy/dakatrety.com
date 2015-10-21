@@ -1,5 +1,5 @@
 # dakatrety.com
-:speak_no_evil: A web app for university students to rate their professors anonymously and publicly. - Sorry! The app is in Arabic!
+:speak_no_evil: A web app for university students to rate their professors anonymously and publicly. - Sorry, The app is in Arabic!
 
 ![home page](https://cdn-images-1.medium.com/max/2000/1*_B8jCzqfKs28nJ1pjgAatQ.png)
 
